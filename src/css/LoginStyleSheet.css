@@ -1,0 +1,48 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 110%;
+    min-width: 200px;
+    min-height: 600px;
+    background-image: linear-gradient(to bottom, #FAE54E, #FA981D);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+form fieldset {
+    border-width: 0px;
+}
+
+input {
+    font-size: 110%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20%;
+    border-width: 0;
+}
+
+input[type=submit], input[type=button] {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+label {
+    display: block;
+    text-align: center;
+}
+
+footer {
+    font-size: 70%;
+    text-align: center;
+    font-style: italic;
+    padding: 1%;
+}
