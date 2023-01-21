@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Register</title>
+        <!--<base href="?" target="?"/>-->
+        <link rel="stylesheet" type="text/css" href="../css/light-background.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/RegisterLoginSS.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/RegisterStyleSheet.css"/>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <header>
+            <img src="../resources/WeFitLogo.png" alt="WeFit logo"/>
+        </header>
+        <div>
+            <form method="POST" name="Accesso">
+                <fieldset>
+                    <label>Username<br/>
+                        <input type="text" name="Username" required autofocus/><br/>
+                    </label>
+                    <label>Data di nascita<br/>
+                        <input type="date" name="dataDiNascita" required/><br/>
+                    </label>
+                    <label>Email<br/>
+                        <input type="email" name="email" required/>
+                    </label>
+                    <div id="altezzaPeso">
+                        <label>Altezza<br/>
+                            <input type="number" name="altezza" required/>
+                            <label id="unitaMisura">cm</label>
+                        </label>
+                        <label>Peso<br/>
+                            <input type="number" name="peso" required/>
+                            <label id="unitaMisura">kg</label>
+                        </label>
+                    </div>
+                    <label>Password<br/>
+                        <input type="password" name="Password" required/><br/>
+                    </label>
+                </fieldset>
+                <input type="submit" value="Registrati"/>
+            </form>
+            <label>Hai già un account? Torna al <a href="Login.html">login</a></label>
+            
+        </div>
+    </body>
+</html>
