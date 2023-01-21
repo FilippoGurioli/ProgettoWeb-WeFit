@@ -1,4 +1,9 @@
+html {
+    height: 100%;
+}
+
 body{
 	margin: 0;
-	background-image: linear-gradient(to bottom, #FAE54E, #FA981D);
+	background-image: linear-gradient(#fae54e, #fa981d);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
