@@ -4,32 +4,34 @@
         <title>Login</title>
         <!--<base href="?" target="?"/>-->
         <link rel="stylesheet" type="text/css" href="../css/LoginStyleSheet.css"/>
-        <meta charset="UTF-8"/>
+        <!--<meta charset="UTF-8"/>-->
     </head>
     <body>
-        <header>
-            <figure>
-                <img src="../resources/WeFitLogo.png" alt="WeFit logo"/>
-            </figure>
-        </header>
-        <div>
-            <form method="POST" name="Accesso">
-                <fieldset>
-                    <label>Username<br/>
-                        <input type="text" name="Username" required autofocus/><br/>
-                    </label>
-                    <label>Password<br/>
-                        <input type="password" name="Password" required/><br/>
-                    </label>
-                </fieldset>
-                <input type="submit" value="Accedi"/>
-            </form>
-            <form method="GET" name="Registrazione">
-                <label>Non sei registrato?<br/>
-                    <input type="button" value="Registrati"/>
-                </label>
-            </form>
+        <div id="page-container">
+            <div id="content-wrap">
+                <header>
+                    <img src="../resources/WeFitLogo.png" alt="WeFit logo"/>
+                </header>
+                <div>
+                    <form method="POST" name="Accesso">
+                        <fieldset>
+                            <label>Username<br/>
+                                <input type="text" name="Username" required autofocus/><br/>
+                            </label>
+                            <label>Password<br/>
+                                <input type="password" name="Password" required/><br/>
+                            </label>
+                        </fieldset>
+                        <input type="submit" value="Accedi"/>
+                    </form>
+                    <form method="GET" name="Registrazione">
+                        <label>Non sei registrato?<br/>
+                            <input type="button" value="Registrati"/>
+                        </label>
+                    </form>
+                </div>
+            </div>
+            <footer>By Filippo Gurioli & Silvia Furegato</footer>
         </div>
-        <footer>By Filippo Gurioli & Silvia Furegato</footer>
     </body>
 </html>
