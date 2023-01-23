@@ -12,7 +12,7 @@
         <header>
             <img src="../resources/WeFitLogo.png" alt="WeFit logo"/>
         </header>
-        <div>
+        <div id="form">
             <form method="POST" name="Accesso">
                 <fieldset>
                     <label>Username<br/>
@@ -22,26 +22,27 @@
                         <input type="date" name="dataDiNascita" required/><br/>
                     </label>
                     <label>Email<br/>
-                        <input type="email" name="email" required/>
+                        <input type="email" name="email" required/><br/>
                     </label>
-                    <div id="altezzaPeso">
-                        <label>Altezza<br/>
-                            <input type="number" name="altezza" required/>
-                            <label id="unitaMisura">cm</label>
-                        </label>
-                        <label>Peso<br/>
-                            <input type="number" name="peso" required/>
-                            <label id="unitaMisura">kg</label>
-                        </label>
-                    </div>
+                        <div id="altezza">
+                            <label>Altezza<br/>
+                                <input type="number" name="altezza" required/>
+                                <label id="unitaMisura">cm</label><br/>
+                            </label>
+                        </div>
+                        <div id="peso">
+                            <label>Peso<br/>
+                                <input type="number" name="peso" required/>
+                                <label id="unitaMisura">kg</label><br/>
+                            </label>
+                        </div>
                     <label>Password<br/>
-                        <input type="password" name="Password" required/><br/>
+                        <input type="password" name="password" required/><br/>
                     </label>
                 </fieldset>
                 <input type="submit" value="Registrati"/>
             </form>
             <label>Hai già un account? Torna al <a href="Login.html">login</a></label>
-            
         </div>
     </body>
 </html>
