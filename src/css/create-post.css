@@ -1,0 +1,88 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    margin: 3% 0%;
+}
+
+form{
+    width: 100%;
+}
+
+#comment-fields, #images-fields, #training-plan-fields, #weight-fields{
+    width: 100%;
+    border: 0px;
+    padding: 2%;
+}
+
+#comment-fields textarea{
+    padding: 1%;
+    display: block;
+    width: 93%;
+    height: 10vh;
+    border-radius: 20px;
+    border: 0px;
+    margin-top: 1%;
+}
+
+#images-fields input[type=file]{
+    display: block;
+    margin-top: 1%;
+}
+
+#img-section{
+    width: 95%;
+    height: 10vh;
+    margin-top: 1%;
+}
+
+#plan{
+    width: 95%;
+    height: 5vh;
+    background-color: white;
+    border-radius: 20px;
+    margin-top: 1%;
+}
+
+#training-plan-fields fieldset{
+    width: 95%;
+    border: 0px;
+    margin-top: 1%;
+}
+
+#weight-fields b{
+    display: block;
+}
+
+#weight-fields input[type=number]{
+    width: 10%;
+    padding: 1%;
+    border-radius: 20px;
+    border: 0px;
+    margin-top: 1%;
+}
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+input[type=submit]{
+    padding: 2% 5%;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 0px;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+a{
+    color: black;
+    margin-top: 1%;
+    display: block;
+    text-align: center;
+}
