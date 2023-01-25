@@ -9,24 +9,24 @@ h1{
     margin: 3% 0%;
 }
 
-form{
-    width: 100%;
+#comment-fields, #images-fields, #training-plan-fields, #weight-fields{
+    padding: 2%;
+    width: 96%; /*2% left padding + 96% width + 2% right padding*/
+    border: 0px;
 }
 
-#comment-fields, #images-fields, #training-plan-fields, #weight-fields{
-    width: 100%;
+#training-plan-fields fieldset {
     border: 0px;
-    padding: 2%;
 }
 
 #comment-fields textarea{
     padding: 1%;
     display: block;
-    width: 93%;
+    width: 98%;  /*1% left padding + 98% width + 1% right padding*/
     height: 10vh;
     border-radius: 20px;
-    border: 0px;
     margin-top: 1%;
+    resize: none;
 }
 
 #images-fields input[type=file]{
@@ -35,13 +35,11 @@ form{
 }
 
 #img-section{
-    width: 95%;
     height: 10vh;
     margin-top: 1%;
 }
 
 #plan{
-    width: 95%;
     height: 5vh;
     background-color: white;
     border-radius: 20px;
@@ -49,9 +47,58 @@ form{
 }
 
 #training-plan-fields fieldset{
-    width: 95%;
+    background-color: #FFE694;
     border: 0px;
     margin-top: 1%;
+    border-radius: 20px;
+    padding: 2%;
+    width: auto;
+    height: auto;
+}
+
+#training-plan-fields fieldset label {
+    display: block;
+    font-size: 13pt;
+}
+
+#training-plan-fields fieldset input {
+    border-radius: 10px;
+    border: 0px;
+    height: 2.3vh;
+    margin-top:1%;
+}
+
+input[name=txtExcercise] {
+    padding-left: 1%;
+    width: 35%;
+}
+
+input[name=btnStatico], input[name=btnDinamico] {
+    background-color: #FA981D;
+    width: 48.5%;
+    font-size: 14pt;
+}
+
+#training-plan-fields fieldset input[type=number] {
+    width: 10%;
+    padding-left: 1%;
+}
+
+input[name=btnStatico] {
+    margin-right: 2%;
+}
+
+input[name=btnAggiungi] {
+    background-color: #FA981D;
+    font-size: 14pt;
+    font-weight: bold;
+    padding: 0% 5%;
+}
+
+#training-plan-fields div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #weight-fields b{
@@ -78,6 +125,7 @@ input[type=submit]{
     border-radius: 20px;
     border: 0px;
     box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.5);
+    font-size: 17pt;
 }
 
 a{
@@ -85,4 +133,6 @@ a{
     margin-top: 1%;
     display: block;
     text-align: center;
+    text-decoration: none;
+    font-size: 15pt;
 }
