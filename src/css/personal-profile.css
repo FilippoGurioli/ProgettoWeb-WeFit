@@ -2,7 +2,7 @@
     p, h1 {
         line-height: 60%;
     }
-
+    
     a[href=Settings\.html] {
         position: absolute;
         top: 15%;
@@ -13,7 +13,7 @@
         border-radius: 50px;
         padding: 1%;
     }
-
+    
     a[href=Settings\.html] img {
         margin: 0;
         width: 100%;
@@ -34,7 +34,7 @@
         border-radius: 30px;
         padding-bottom: 1%;
     }
-    
+
     .badge img {
         margin: 1%;
         width: 33%;
