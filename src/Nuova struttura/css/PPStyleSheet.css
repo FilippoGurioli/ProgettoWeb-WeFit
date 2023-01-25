@@ -1,7 +1,12 @@
+p, h1 {
+    line-height: 60%;
+}
+
 a[href=Settings\.html] {
     position: absolute;
     left: 90%;
-    width: 8%;
+    width: 7%;
+    height: 13%;
     padding: 1%;
 }
 
@@ -66,51 +71,6 @@ a[href=Settings\.html] img {
     font-size: 300%;
 }
 
-@media (orientation: landscape) {
-    a[href=Settings\.html] {
-        top: 3%;
-    }
-    
-    .badgeContainer {
-        width: 45%;
-        height: 100vh;
-        float: left;
-    }
-    
-    .badge {
-        font-size: 18pt;
-        width: 100%;
-        margin: 1%;
-    }
-    
-    .badge img {
-        width: 25%;
-    }
-    
-    .placeholder {
-        display: none;
-    }
-    
-    .obiettivo {
-        margin: 1%;
-        padding: 3% 0%;
-        width: 100%;
-    }
-    
-    .obiettivo h1 {
-        padding: 0% 10%;
-    }
-    
-    .obiettivo p {
-        font-size: 150%;
-    }
-    
-    .post {
-        float: right;
-        width: 43%;
-    }
-}
-
 @media (orientation: portrait) {
     a[href=Settings\.html] {
         top: 15%;
@@ -125,7 +85,7 @@ a[href=Settings\.html] img {
         font-size: 30pt;
         margin: 3% 3% 1%;
     }
-
+    
     .badge img {
         width: 33%;
     }
@@ -148,21 +108,49 @@ a[href=Settings\.html] img {
     .obiettivo p {
         font-size: 30pt;
     }
-    @media (max-width: 837px) {
-        h1, .obiettivo h1 {
-            font-size: 25pt;
-        }
+}
 
-        p, .obiettivo p, a{
-            font-size: 18pt;
-        }
+@media (orientation: landscape) {
+    a[href=Settings\.html] {
+        top: 3%;
+    }
 
-        .badgeContainer {
-            height: 50vh;
-        }
+    .badgeContainer {
+        width: 45%;
+        height: 100vh;
+        float: left;
+    }
 
-        .placeholder {
-            height: 50vh;
-        }
+    .badge {
+        font-size: 18pt;
+        width: 100%;
+        margin: 1%;
+    }
+    
+    .badge img {
+        width: 25%;
+    }
+
+    .placeholder {
+        display: none;
+    }
+
+    .obiettivo {
+        margin: 1%;
+        padding: 3% 0%;
+        width: 100%;
+    }
+
+    .obiettivo h1 {
+        padding: 0% 10%;
+    }
+
+    .obiettivo p {
+        font-size: 150%;
+    }
+
+    .post {
+        float: right;
+        width: 43%;
     }
 }

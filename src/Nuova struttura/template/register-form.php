@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="it">
     <head>
-        <title>WeFit - Register</title>
+        <title>Register</title>
+        <!--<base href="?" target="?"/>-->
         <link rel="stylesheet" type="text/css" href="../css/light-background.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/register-login.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/register.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/RegisterLoginSS.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/RegisterStyleSheet.css"/>
         <meta charset="UTF-8"/>
     </head>
     <body>
@@ -12,14 +13,10 @@
             <img src="../resources/WeFitLogo.png" alt="WeFit logo"/>
         </header>
         <div id="form">
-<<<<<<< HEAD
             <form action="#" method="POST" name="Accesso">
-=======
-            <form action="../php/register.php" method="POST" name="Accesso">
->>>>>>> b33c4a874a0c445f3bb0d7b5e3ec9d1d866149b8
                 <fieldset>
                     <label>Username<br/>
-                        <input type="text" name="Username" required autofocus/><br/>
+                        <input type="text" name="username" required autofocus/><br/>
                     </label>
                     <label>Data di nascita<br/>
                         <input type="date" name="dataDiNascita" required/><br/>
@@ -29,12 +26,14 @@
                     </label>
                         <div id="altezza">
                             <label>Altezza<br/>
-                                <input type="number" min="0" max="250" name="altezza" required/>cm<br/>
+                                <input type="number" name="altezza" required/>
+                                <label id="unitaMisura">cm</label><br/>
                             </label>
                         </div>
                         <div id="peso">
                             <label>Peso<br/>
-                                <input type="number" step="0.1" min="0" max="200" name="peso" required/>kg<br/>
+                                <input type="number" name="peso" required/>
+                                <label id="unitaMisura">kg</label><br/>
                             </label>
                         </div>
                     <label>Password<br/>

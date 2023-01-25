@@ -1,0 +1,76 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 120px;
+    min-height: 120px;
+    max-width: 400px;
+    max-height: 400px;
+}
+
+form fieldset {
+    border-width: 0px;
+}
+
+input, button {
+    border-radius: 40px;
+    border: 0;
+    box-shadow: rgba(0,0,0,0.3) 10px 10px 10px;
+}
+
+input[type=submit], button {
+    font-weight: bold;
+    padding: 1.5% 10%;
+}
+
+@media (orientation: portrait) {
+    img {
+        margin-top: 10%;
+        width: 35%;
+        height: 35%;
+    }
+
+    form fieldset {
+        margin-top: 15%;
+    }
+
+    label, input {
+        font-size: 30pt;
+    }
+
+    input {
+        padding-left: 20px;
+        border-radius: 30px;
+    }
+
+    button, input[type=submit] {
+        font-size: 65pt;
+    }
+
+    input[type=submit] {
+        margin-top: 25%;
+        margin-bottom: 5%;
+    }
+}
+
+@media (orientation: landscape) {
+    img {
+        margin-top: 5%;
+        width: 25%;
+        height: 25%;
+    }
+
+    label, input {
+        font-size: 30pt;
+    }
+
+    input {
+        padding-left: 20px;
+        border-radius: 30px;
+    }
+
+    button, input[type=submit] {
+        font-size: 45pt;
+        padding: 1% 4%;
+    }
+}
