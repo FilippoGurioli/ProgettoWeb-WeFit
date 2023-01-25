@@ -1,0 +1,6 @@
+body{
+	margin: 0;
+	background-image: linear-gradient(#fae54e, #fa981d);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-attachment: fixed;
+}

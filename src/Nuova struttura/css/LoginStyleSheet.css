@@ -1,0 +1,56 @@
+body {
+    position: relative;
+}
+
+input, button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+label {
+    display: block;
+    text-align: center;
+}
+
+#page-container {
+    position: relative;
+}
+  
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+@media (orientation: portrait) {
+    button {
+        margin-top: 1%;
+    }
+
+    footer {
+        margin-bottom: 1%;
+        font-size:110%;
+    }
+}
+
+@media (orientation: landscape) {
+    button {
+        margin-top: 0.5%;
+    }
+
+    footer {
+        font-size:110%;
+    }
+}
