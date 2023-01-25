@@ -13,7 +13,7 @@
             <img src="../resources/WeFitLogo.png" alt="WeFit logo"/>
         </header>
         <div id="form">
-            <form method="POST" name="Accesso">
+            <form action="../php/register.php" method="POST" name="Accesso">
                 <fieldset>
                     <label>Username<br/>
                         <input type="text" name="Username" required autofocus/><br/>
@@ -40,7 +40,7 @@
                         <input type="password" name="password" required/><br/>
                     </label>
                 </fieldset>
-                <input type="submit" value="Registrati"/>
+                <input type="submit" name="btnRegister" value="Registrati"/>
             </form>
             <label>Hai già un account? Torna al <a href="Login.html">login</a></label>
         </div>
