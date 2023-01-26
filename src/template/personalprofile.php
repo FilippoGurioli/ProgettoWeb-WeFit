@@ -1,13 +1,13 @@
 <div id="badgeContainer">
 	<header id="badge">
-		<img src="../resources/profile_pictures/photo1ORIGINAL.jpg" alt="profile picture"/>
+		<img src="./resources/profile_pictures/photo1ORIGINAL.jpg" alt="profile picture"/>
 		<div id="dati">
 			<h1>Matteo Rossi</h1>
 			<p>17/02/1998</p>
 			<p>Peso: 80kg</p>
 			<p>Altezza: 170cm</p>
 		</div>
-		<a href="Settings.html"><img src="../resources/WeFitLogo.png" alt="impostazioni del profilo"></a>
+		<a href="Settings.html"><img src="./resources/WeFitLogo.png" alt="impostazioni del profilo"></a>
 		<div id="link">
 			<a href="Follower.html">Follower: <label>128</label></a>
 			<a href="Seguiti.html">Seguiti: <label>64</label></a>
@@ -24,7 +24,7 @@
 <section class="post">
 	<header>
 		<div class="container">
-			<img class="profile-pic" alt="Immagine di profilo" src="../resources/profile_pictures/WeFitPic.png">
+			<img class="profile-pic" alt="Immagine di profilo" src="./resources/profile_pictures/WeFitPic.png">
 			<div class="name">Nome</div>
 		</div>
 	</header>
@@ -32,16 +32,16 @@
 		<div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 		<div class="training-plan">Allenamento: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 		<div class="photo-container">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
 		</div>
 	</section>
 	<footer>
@@ -51,7 +51,7 @@
 <section class="post">
 	<header>
 		<div class="container">
-			<img class="profile-pic" alt="Immagine di profilo" src="../resources/profile_pictures/WeFitPic.png">
+			<img class="profile-pic" alt="Immagine di profilo" src="./resources/profile_pictures/WeFitPic.png">
 			<div class="name">Nome</div>
 		</div>
 	</header>
@@ -59,16 +59,16 @@
 		<div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 		<div class="training-plan">Allenamento: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 		<div class="photo-container">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
 		</div>
 	</section>
 	<footer>
@@ -78,7 +78,7 @@
 <section class="post">
 	<header>
 		<div class="container">
-			<img class="profile-pic" alt="Immagine di profilo" src="../resources/profile_pictures/WeFitPic.png">
+			<img class="profile-pic" alt="Immagine di profilo" src="./resources/profile_pictures/WeFitPic.png">
 			<div class="name">Nome</div>
 		</div>
 	</header>
@@ -86,16 +86,16 @@
 		<div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 		<div class="training-plan">Allenamento: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 		<div class="photo-container">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
 		</div>
 	</section>
 	<footer>
@@ -105,7 +105,7 @@
 <section class="post">
 	<header>
 		<div class="container">
-			<img class="profile-pic" alt="Immagine di profilo" src="../resources/profile_pictures/WeFitPic.png">
+			<img class="profile-pic" alt="Immagine di profilo" src="./resources/profile_pictures/WeFitPic.png">
 			<div class="name">Nome</div>
 		</div>
 	</header>
@@ -113,16 +113,16 @@
 		<div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 		<div class="training-plan">Allenamento: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 		<div class="photo-container">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
 		</div>
 	</section>
 	<footer>
@@ -132,7 +132,7 @@
 <section class="post">
 	<header>
 		<div class="container">
-			<img class="profile-pic" alt="Immagine di profilo" src="../resources/profile_pictures/WeFitPic.png">
+			<img class="profile-pic" alt="Immagine di profilo" src="./resources/profile_pictures/WeFitPic.png">
 			<div class="name">Nome</div>
 		</div>
 	</header>
@@ -140,16 +140,16 @@
 		<div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 		<div class="training-plan">Allenamento: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 		<div class="photo-container">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
 		</div>
 	</section>
 	<footer>
@@ -159,7 +159,7 @@
 <section class="post">
 	<header>
 		<div class="container">
-			<img class="profile-pic" alt="Immagine di profilo" src="../resources/profile_pictures/WeFitPic.png">
+			<img class="profile-pic" alt="Immagine di profilo" src="./resources/profile_pictures/WeFitPic.png">
 			<div class="name">Nome</div>
 		</div>
 	</header>
@@ -167,16 +167,16 @@
 		<div class="comment">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 		<div class="training-plan">Allenamento: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 		<div class="photo-container">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
-			<img class="photo" alt="" src="../resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
+			<img class="photo" alt="" src="./resources/WeFitImg.jpg">
 		</div>
 	</section>
 	<footer>

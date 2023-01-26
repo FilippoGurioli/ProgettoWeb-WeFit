@@ -6,7 +6,7 @@
 		if(isset($templateParams["css"])):
 			foreach($templateParams["css"] as $style):
 		?>
-			<link rel="stylesheet" type="text/css" href="../css/<?php echo $style; ?>.css"/>
+			<link rel="stylesheet" type="text/css" href="./css/<?php echo $style; ?>.css"/>
 		<?php
 			endforeach;
 		endif;
@@ -16,7 +16,7 @@
     <body>
         <main>
             <?php
-                if(isset($templateParams["nome"])){
+                if(isset($templateParams["nome"])) {
                     require($templateParams["nome"]);
                 }
             ?>

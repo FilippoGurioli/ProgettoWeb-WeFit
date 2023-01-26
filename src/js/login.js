@@ -10,8 +10,8 @@ function login(username, password) {
     formData.append('username', username);
     formData.append('password', password);
     axios.post('api-login.php', formData).then(response => {
-		if(response.data["logineseguito"]){
-			window.location.pathname = './ProgettoWeb-WeFit/src/Nuova struttura/profile.php';
+		if(response.data["logineseguito"]) {
+			window.location.pathname = './ProgettoWeb-WeFit/src/profile.php';
 		}
     });
 }

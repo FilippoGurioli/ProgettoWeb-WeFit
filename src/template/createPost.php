@@ -32,20 +32,20 @@
                 <input type="button" name="btnDinamico" value="Dinamico"/>
                 <label>
                     N° ripetizioni:
-                    <input type="number" name="nbrReps"/>
+                    <input type="number" class="excercise" name="nbrReps"/>
                 </label>
                 <label>
                     N° serie:
-                    <input type="number" name="nbrSerie"/>
+                    <input type="number" class="excercise" name="nbrSerie"/>
                 </label>
                 <label>
                     Tempo riposo:
-                    <input type="number" step="0.01" name="nbrRestingTime"/>
+                    <input type="number" class="excercise" name="nbrRestingTime"/>
                     <span>min</span>
                 </label>
                 <label>
                     Durata:
-                    <input type="number" step="0.01" name="nbrTime"/>
+                    <input type="number" class="excercise" name="nbrTime"/>
                     <span>min</span>
                 </label>
                 <div>
