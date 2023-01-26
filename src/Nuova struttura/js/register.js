@@ -1,14 +1,14 @@
 tryToRegister();
 
 function tryToRegister() {
-    document.querySelector("form").addEventListener("submit", function (event) {
-        event.preventDefault();
-        const username = document.querySelector("input[name=username]").value;
-        const birth = document.querySelector("input[name=dataDiNascita]").value;
-		const email = document.querySelector("input[name=email]").value;
-		const height = document.querySelector("input[name=altezza]").value;
-		const weight = document.querySelector("input[name=peso]").value;
-		const password = document.querySelector("input[name=password]").value;
+    document.querySelector("main form").addEventListener("submit", function (event) {
+        //event.preventDefault();
+        const username = document.querySelector("#username").value;
+        const birth = document.querySelector("#dataDiNascita").value;
+		const email = document.querySelector("#email").value;
+		const height = document.querySelector("#altezza").value;
+		const weight = document.querySelector("#peso").value;
+		const password = document.querySelector("#password").value;
         register(username, birth, email, height, weight, password);
     });
 }
@@ -21,7 +21,7 @@ function register(username, birth, email, height, weight, password) {
 	formData.append('height', height);
 	formData.append('weight', weight);
 	formData.append('password', password);
-    axios.post('api-login.php', formData).then(response => {
+    axios.post('api-register.php', formData).then(response => {
         console.log(response);
     });
 }

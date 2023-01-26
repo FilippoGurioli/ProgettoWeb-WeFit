@@ -10,9 +10,9 @@
         }
 		
 		public function register($user, $birth, $email, $height, $weight, $password){
-                $stmt = $this->db->prepare("INSERT INTO `users` (`Username`, `Email`, `Password`, `Photo`, `Birthday`, `Height`, `Weight`) VALUES (?, ?, ?, '../resources/profile_pictures/WeFitPic', ?, ?, ?);");
-                $stmt->bind_param('sssidd', $user, $email, $password, $birth, $height, $weight);
-                $stmt->execute();
+            $stmt = $this->db->prepare("INSERT INTO `users` (`Username`, `Email`, `Password`, `Photo`, `Birthday`, `Height`, `Weight`) VALUES (?, ?, ?, '../upload/profile_pictures/WeFitPic.png', ?, ?, ?);");
+            $stmt->bind_param('sssidd', $user, $email, $password, $birth, $height, $weight);
+            $stmt->execute();
 		}
     }
 ?>
