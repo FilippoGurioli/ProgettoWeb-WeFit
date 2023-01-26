@@ -1,19 +1,16 @@
 <div id="page-container">
     <div id="content-wrap">
         <header>
-            <img src="../resources/WeFitLogo.png" alt="WeFit logo"/>
+            <img src="<?php echo UPLOAD_DIR.'WeFitLogo.png'; ?>" alt="WeFit logo"/>
         </header>
         <div>
             <form action="#" method="POST" name="Accesso">
-                <?php if(isset($templateParams["errorelogin"])): ?>
-                    <p><?php echo $templateParams["errorelogin"]; ?></p>
-                <?php endif; ?>
                 <fieldset>
                     <label>Username<br/>
-                        <input type="text" name="Username" required autofocus/><br/>
+                        <input type="text" name="username" required autofocus/><br/>
                     </label>
                     <label>Password<br/>
-                        <input type="password" name="Password" required/><br/>
+                        <input type="password" name="password" required/><br/>
                     </label>
                 </fieldset>
                 <input type="submit" value="Accedi"/>

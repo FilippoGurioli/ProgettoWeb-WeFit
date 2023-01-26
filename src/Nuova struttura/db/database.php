@@ -14,5 +14,15 @@
             $stmt->bind_param('sssidd', $user, $email, $password, $birth, $height, $weight);
             $stmt->execute();
 		}
+		
+		public function checkLogin($username, $password){
+			$query = "SELECT Username, Password FROM users WHERE Username = ? AND Password = ?";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('ss',$username, $password);
+			$stmt->execute();
+			$result = $stmt->get_result();
+
+			return $result->fetch_all(MYSQLI_ASSOC);
+		}
     }
 ?>
