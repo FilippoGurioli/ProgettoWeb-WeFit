@@ -1,9 +1,13 @@
 <?php
-	require_once 'bootstrap.php';
-	
-	if(isset($_POST["username"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["dataDiNascita"]) && isset($_POST["altezza"]) && isset($_POST["peso"])){
-		$dbh->register($_POST['username'], $_POST['dataDiNascita'], $_POST['email'], $_POST['altezza'], $_POST['peso'], $_POST['password']);
-	}
-	
-	require 'template/register-form.php';
+require_once 'bootstrap.php';
+
+$result["registration"] = false;
+
+if(isset($_POST["username"]) && isset($_POST["dataDiNascita"]) && isset($_POST["email"]) && isset($_POST["heigth"]) && isset($_POST["weight"]) && isset($_POST["password"])){
+    $dbh->register($_POST["username"], $_POST["dataDiNascita"], $_POST["email"], $_POST["heigth"], $_POST["weight"], $_POST["password"]);
+	$result["registration"] = true;
+}
+
+header('Content-Type: application/json');
+echo json_encode($result);
 ?>

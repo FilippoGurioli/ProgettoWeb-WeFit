@@ -1,0 +1,162 @@
+a[href=Settings\.html] {
+    position: absolute;
+    left: 90%;
+    min-width: 90px;
+    width: 14%;
+    padding: 1%;
+}
+
+a[href=Settings\.html] img {
+    background-color: white;
+    border-radius: 100px;
+    padding: 5%;
+    margin: 0;
+    width: 100%;
+}
+
+#badgeContainer {
+    top: 0;
+    background-color: #333333;
+    position: fixed;
+}
+
+#badge {
+    background-color: #FAE54E;
+    border-radius: 30px;
+    padding-bottom: 1%;
+}
+
+#badge img {
+    margin: 1%;
+    border-radius: 30px;
+    float: left;
+}
+
+#badge a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#badge a label {
+    font-weight: normal;
+}
+
+#dati {
+    float: left;
+    width: 65%;
+}
+
+#link {
+    display: block;
+    clear: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#obiettivo {
+    background-color: #FA981D;
+    border-radius: 30px;
+}
+
+#obiettivo h1 {
+    text-transform: uppercase;
+    float: left;
+    font-weight: bold;
+    font-size: 300%;
+}
+
+@media (orientation: landscape) {
+    a[href=Settings\.html] {
+        top: 3%;
+    }
+    
+    #badgeContainer {
+        width: 45%;
+        height: 100vh;
+        float: left;
+    }
+    
+    #badge {
+        font-size: 18pt;
+        width: 100%;
+        margin: 1%;
+    }
+    
+    #badge img {
+        width: 25%;
+    }
+    
+    #placeholder {
+        display: none;
+    }
+    
+    #obiettivo {
+        margin: 1%;
+        padding: 3% 0%;
+        width: 100%;
+    }
+    
+    #obiettivo h1 {
+        padding: 0% 10%;
+    }
+    
+    #obiettivo p {
+        font-size: 150%;
+    }
+    
+    .post {
+        float: right;
+        width: 43%;
+    }
+}
+
+@media (orientation: portrait) {
+    a[href=Settings\.html] {
+        top: 15%;
+    }
+
+    #badgeContainer {
+        width: 100%;
+        height: 46vw;
+    }
+
+    #badge {
+        font-size: 30pt;
+        margin: 3% 3% 1%;
+    }
+
+    #badge img {
+        width: 33%;
+        max-width: 200px;
+    }
+
+    #placeholder {
+        top: 0;
+        width: 100%;
+        height: 60vw;
+    }
+
+    #obiettivo {
+        margin: 2% 3% 1%;
+        padding: 2%;
+    }
+
+    #obiettivo h1 {
+        padding: 2% 5%;
+    }
+
+    #obiettivo p {
+        font-size: 30pt;
+    }
+    @media (max-width: 837px) {
+        h1, #obiettivo h1 {
+            font-size: 25pt;
+        }
+
+        p, #obiettivo p, a {
+            font-size: 18pt;
+        }
+    }
+}

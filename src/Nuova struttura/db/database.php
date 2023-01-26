@@ -13,8 +13,6 @@
                 $stmt = $this->db->prepare("INSERT INTO `users` (`Username`, `Email`, `Password`, `Photo`, `Birthday`, `Height`, `Weight`) VALUES (?, ?, ?, '../resources/profile_pictures/WeFitPic', ?, ?, ?);");
                 $stmt->bind_param('sssidd', $user, $email, $password, $birth, $height, $weight);
                 $stmt->execute();
-				$stmt->close();
-				$db->close();
 		}
     }
 ?>

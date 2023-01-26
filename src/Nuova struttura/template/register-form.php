@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="it">
     <head>
-        <title>Register</title>
-        <!--<base href="?" target="?"/>-->
+        <title><?php echo $templateParams["titolo"]; ?></title>
         <link rel="stylesheet" type="text/css" href="../css/light-background.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/RegisterLoginSS.css"/>
-        <link rel="stylesheet" type="text/css" href="../css/RegisterStyleSheet.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/register-login.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/register.css"/>
         <meta charset="UTF-8"/>
     </head>
     <body>
@@ -26,14 +25,12 @@
                     </label>
                         <div id="altezza">
                             <label>Altezza<br/>
-                                <input type="number" name="altezza" required/>
-                                <label id="unitaMisura">cm</label><br/>
+                                <input type="number" min="0" max="250" name="altezza" required/>cm<br/>
                             </label>
                         </div>
                         <div id="peso">
                             <label>Peso<br/>
-                                <input type="number" name="peso" required/>
-                                <label id="unitaMisura">kg</label><br/>
+                                <input type="number" step="0.1" min="0" max="350" name="peso" required/>kg<br/>
                             </label>
                         </div>
                     <label>Password<br/>
@@ -44,5 +41,14 @@
             </form>
             <label>Hai già un account? Torna al <a href="Login.html">login</a></label>
         </div>
+		<?php
+		if(isset($templateParams["js"])):
+			foreach($templateParams["js"] as $script):
+		?>
+			<script src="<?php echo $script; ?>"></script>
+		<?php
+			endforeach;
+		endif;
+		?>
     </body>
 </html>

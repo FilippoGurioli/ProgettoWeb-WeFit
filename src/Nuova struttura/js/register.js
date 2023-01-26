@@ -1,37 +1,27 @@
-axios.get('api-register.php').then(response => {
-    visualizzaLoginForm();
-});
+tryToRegister();
 
-function visualizzaLoginForm() {
-    // Gestisco tentativo di login
-    document.querySelector("main form").addEventListener("submit", function (event) {
+function tryToRegister() {
+    document.querySelector("form").addEventListener("submit", function (event) {
         event.preventDefault();
-        const username = document.querySelector("#username").value;
-        const password = document.querySelector("#password").value;
-        register(username, password);
+        const username = document.querySelector("input[name=username]").value;
+        const birth = document.querySelector("input[name=dataDiNascita]").value;
+		const email = document.querySelector("input[name=email]").value;
+		const height = document.querySelector("input[name=altezza]").value;
+		const weight = document.querySelector("input[name=peso]").value;
+		const password = document.querySelector("input[name=password]").value;
+        register(username, birth, email, height, weight, password);
     });
 }
 
-function register(username, password) {
-    /* 
-     * Non funzionante in quanto i parametri sono convertiti in formato json e non sono letti 
-     * da PHP che non li inserisce nell'array $_POST:
-     * 
-     * const formData = { 
-     *     data: {
-     *         username: document.querySelector("#username").value,
-     *         password: document.querySelector("#password").value
-     *     }
-     * }
-     */
+function register(username, birth, email, height, weight, password) {
     const formData = new FormData();
     formData.append('username', username);
-    formData.append('password', password);
+    formData.append('birthday', birth);
+	formData.append('email', email);
+	formData.append('height', height);
+	formData.append('weight', weight);
+	formData.append('password', password);
     axios.post('api-login.php', formData).then(response => {
         console.log(response);
-        if (response.data["logineseguito"]) {
-            visualizzaArticoli(response.data["articoliautore"]);
-        } else {
-            document.querySelector("form > p").innerText = response.data["errorelogin"];
-        }
     });
+}
