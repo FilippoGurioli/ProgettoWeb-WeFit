@@ -1,7 +1,8 @@
 a[href=Settings\.html] {
     position: absolute;
     left: 90%;
-    width: 8%;
+    min-width: 90px;
+    width: 14%;
     padding: 1%;
 }
 
@@ -13,40 +14,40 @@ a[href=Settings\.html] img {
     width: 100%;
 }
 
-.badgeContainer {
+#badgeContainer {
     top: 0;
     background-color: #333333;
     position: fixed;
 }
 
-.badge {
+#badge {
     background-color: #FAE54E;
     border-radius: 30px;
     padding-bottom: 1%;
 }
 
-.badge img {
+#badge img {
     margin: 1%;
     border-radius: 30px;
     float: left;
 }
 
-.badge a {
+#badge a {
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
-.badge a label {
+#badge a label {
     font-weight: normal;
 }
 
-.dati {
+#dati {
     float: left;
     width: 65%;
 }
 
-.link {
+#link {
     display: block;
     clear: both;
     display: flex;
@@ -54,12 +55,12 @@ a[href=Settings\.html] img {
     justify-content: space-evenly;
 }
 
-.obiettivo {
+#obiettivo {
     background-color: #FA981D;
     border-radius: 30px;
 }
 
-.obiettivo h1 {
+#obiettivo h1 {
     text-transform: uppercase;
     float: left;
     font-weight: bold;
@@ -71,37 +72,37 @@ a[href=Settings\.html] img {
         top: 3%;
     }
     
-    .badgeContainer {
+    #badgeContainer {
         width: 45%;
         height: 100vh;
         float: left;
     }
     
-    .badge {
+    #badge {
         font-size: 18pt;
         width: 100%;
         margin: 1%;
     }
     
-    .badge img {
+    #badge img {
         width: 25%;
     }
     
-    .placeholder {
+    #placeholder {
         display: none;
     }
     
-    .obiettivo {
+    #obiettivo {
         margin: 1%;
         padding: 3% 0%;
         width: 100%;
     }
     
-    .obiettivo h1 {
+    #obiettivo h1 {
         padding: 0% 10%;
     }
     
-    .obiettivo p {
+    #obiettivo p {
         font-size: 150%;
     }
     
@@ -116,53 +117,46 @@ a[href=Settings\.html] img {
         top: 15%;
     }
 
-    .badgeContainer {
+    #badgeContainer {
         width: 100%;
-        height: 34vh;
+        height: 46vw;
     }
 
-    .badge {
+    #badge {
         font-size: 30pt;
         margin: 3% 3% 1%;
     }
 
-    .badge img {
+    #badge img {
         width: 33%;
+        max-width: 200px;
     }
 
-    .placeholder {
+    #placeholder {
         top: 0;
         width: 100%;
-        height: 37vh;
+        height: 60vw;
     }
 
-    .obiettivo {
+    #obiettivo {
         margin: 2% 3% 1%;
         padding: 2%;
     }
 
-    .obiettivo h1 {
+    #obiettivo h1 {
         padding: 2% 5%;
     }
 
-    .obiettivo p {
+    #obiettivo p {
         font-size: 30pt;
     }
     @media (max-width: 837px) {
-        h1, .obiettivo h1 {
+        h1, #obiettivo h1 {
             font-size: 25pt;
         }
 
-        p, .obiettivo p, a{
+        p, #obiettivo p, a {
             font-size: 18pt;
-        }
-
-        .badgeContainer {
-            height: 50vh;
-        }
-
-        .placeholder {
-            height: 50vh;
         }
     }
 }

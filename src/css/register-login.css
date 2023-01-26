@@ -6,6 +6,14 @@ img {
     max-width: 400px;
 }
 
+input {
+    padding-left: 20px;
+}
+
+label, input {
+    font-size: 30pt;
+}
+
 input, button {
     box-shadow: rgba(0,0,0,0.3) 10px 10px 10px;
 }
@@ -31,14 +39,6 @@ input[type=submit], button {
         margin-top: 15%;
     }
 
-    label, input {
-        font-size: 30pt;
-    }
-
-    input {
-        padding-left: 20px;
-    }
-
     button, input[type=submit] {
         font-size: 55pt;
     }
@@ -52,14 +52,6 @@ input[type=submit], button {
 @media (orientation: landscape) {
     img {
         width: 12%;
-    }
-
-    label, input {
-        font-size: 30pt;
-    }
-
-    input {
-        padding-left: 20px;
     }
 
     button, input[type=submit] {
