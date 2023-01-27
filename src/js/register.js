@@ -18,8 +18,6 @@ function register(username, password, birthday, email, height, weight) {
     formData.append('height', height);
     formData.append('weight', weight);
     axios.post('api-register.php', formData).then(response => {
-		if(response.data["registrazioneCompletata"]) {
-			window.location.pathname = './ProgettoWeb-WeFit/src/login-redirector.php';
-		}
+		window.location.pathname = './ProgettoWeb-WeFit/src/login-redirector.php';
     });
 }
