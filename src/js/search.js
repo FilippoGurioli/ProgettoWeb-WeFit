@@ -22,7 +22,7 @@ function search(searched) {
 		if(response.data["successoRicerca"]) {
 			window.location.pathname = './ProgettoWeb-WeFit/src/friend-profile-redirector.php';
 		} else {
-      alert("Non esiste nessuno con quel nickname");
+      alert("Non esiste nessuno con quell'username");
     }
   });
 }
