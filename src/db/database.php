@@ -44,5 +44,12 @@
 
 			return $result->fetch_all(MYSQLI_ASSOC);
 		}
+		
+		public function updateUser($new, $old, $param) {
+			$query = "UPDATE `users` SET ? = ? WHERE `users`.? = ?;";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('ssss', $param, $newUsername, $param, $oldUsername);
+			$stmt->execute();
+		}
     }
 ?>
