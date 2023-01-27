@@ -51,5 +51,17 @@
 			$stmt->bind_param('ssss', $param, $newUsername, $param, $oldUsername);
 			$stmt->execute();
 		}
+		
+		public function follow($follower, $followed) {
+			$query = "INSERT INTO `followers` (`User1`, `User2`) VALUES (?, ?);";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('ss', $follower, $followed);
+			$stmt->execute();
+			
+			$query = "INSERT INTO `followed` (`User1`, `User2`) VALUES (?, ?);";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('ss', $followed, $follower);
+			$stmt->execute();
+		}
     }
 ?>

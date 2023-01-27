@@ -4,7 +4,7 @@ require_once 'bootstrap.php';
 $templateParams["titolo"] = "WeFit - Friend Profile";
 $templateParams["nome"] = "profile.php";
 $templateParams["css"] = array("dark-background", "navbar", "post", "profile");
-$templateParams["js"] = array("https://unpkg.com/axios/dist/axios.min.js","js/search.js");
+$templateParams["js"] = array("https://unpkg.com/axios/dist/axios.min.js","js/search.js","js/follow.js");
 $templateParams["profile"] = array("username" => $_SESSION["searchResult"]);
 $templateParams["profile"] = array_merge($templateParams["profile"], array("birthday" => $dbh->getUserInfo($_SESSION["searchResult"])[0]["Birthday"]));
 $templateParams["profile"] = array_merge($templateParams["profile"], array("weight" => $dbh->getUserInfo($_SESSION["searchResult"])[0]["Weight"]));
@@ -19,7 +19,7 @@ if ($tmp["weightTarget"] === null) {
     $templateParams["profile"] = array_merge($templateParams["profile"], $tmp);
     $templateParams["profile"] = array_merge($templateParams["profile"], array("time" => $dbh->getUserInfo($_SESSION["searchResult"])[0]["Time"]));
 }
-$templateParams["profile"] = array_merge($templateParams["profile"], array("profilePic" => $dbh->getUserInfo($_SESSION["username"])[0]["Photo"]));
+$templateParams["profile"] = array_merge($templateParams["profile"], array("profilePic" => $dbh->getUserInfo($_SESSION["searchResult"])[0]["Photo"]));
 
 $navbarVisible = true;
 $isPersonalP = false;

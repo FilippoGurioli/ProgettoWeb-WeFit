@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 27, 2023 alle 19:05
+-- Creato il: Gen 27, 2023 alle 20:42
 -- Versione del server: 10.4.27-MariaDB
 -- Versione PHP: 8.2.0
 
@@ -51,14 +51,6 @@ CREATE TABLE `followed` (
   `User2` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dump dei dati per la tabella `followed`
---
-
-INSERT INTO `followed` (`User1`, `User2`) VALUES
-('Giulio33', 'Maria'),
-('Maria', 'Giulio33');
-
 -- --------------------------------------------------------
 
 --
@@ -69,14 +61,6 @@ CREATE TABLE `followers` (
   `User1` varchar(20) NOT NULL,
   `User2` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dump dei dati per la tabella `followers`
---
-
-INSERT INTO `followers` (`User1`, `User2`) VALUES
-('Giulio33', 'Maria'),
-('Maria', 'Giulio33');
 
 -- --------------------------------------------------------
 
@@ -151,6 +135,7 @@ ALTER TABLE `comments`
 -- Indici per le tabelle `followed`
 --
 ALTER TABLE `followed`
+  ADD PRIMARY KEY (`User1`,`User2`),
   ADD KEY `friendship3` (`User1`),
   ADD KEY `friendship4` (`User2`);
 
@@ -158,6 +143,7 @@ ALTER TABLE `followed`
 -- Indici per le tabelle `followers`
 --
 ALTER TABLE `followers`
+  ADD PRIMARY KEY (`User1`,`User2`),
   ADD KEY `friendship` (`User1`),
   ADD KEY `friendship2` (`User2`);
 
