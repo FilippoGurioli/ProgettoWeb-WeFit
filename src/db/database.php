@@ -34,7 +34,7 @@
 
 			return $result->fetch_all(MYSQLI_ASSOC);
 		}
-		
+
 		public function getUserInfo($username) {
 			$query = "SELECT * FROM users WHERE Username = ?";
 			$stmt = $this->db->prepare($query);

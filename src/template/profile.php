@@ -1,6 +1,6 @@
 <div id="badgeContainer">
 	<header id="badge">
-		<img src="./upload/profile_pictures/photo1ORIGINAL.jpg" alt="profile picture"/>
+		<img src="./upload/<?php echo $templateParams["profile"]["profilePic"]?>" alt="profile picture"/>
 		<div id="dati">
 			<h1><?php echo $templateParams["profile"]["username"];?></h1>
 			<p><?php echo $templateParams["profile"]["birthday"];?></p>

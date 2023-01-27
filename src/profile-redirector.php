@@ -13,7 +13,7 @@ $templateParams["profile"] = array_merge($templateParams["profile"], array("numF
 $templateParams["profile"] = array_merge($templateParams["profile"], array("numFollowed" => "69"));
 $templateParams["profile"] = array_merge($templateParams["profile"], array("weightTarget" => "54"));
 $templateParams["profile"] = array_merge($templateParams["profile"], array("time" => "2 mesi"));
-
+$templateParams["profile"] = array_merge($templateParams["profile"], array("profilePic" => $dbh->getUserInfo($_SESSION["username"])[0]["Photo"]));
 
 $navbarVisible = true;
 $isPersonalP = true;
