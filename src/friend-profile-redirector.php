@@ -9,8 +9,8 @@ $templateParams["profile"] = array("username" => $_SESSION["searchResult"]);
 $templateParams["profile"] = array_merge($templateParams["profile"], array("birthday" => $dbh->getUserInfo($_SESSION["searchResult"])[0]["Birthday"]));
 $templateParams["profile"] = array_merge($templateParams["profile"], array("weight" => $dbh->getUserInfo($_SESSION["searchResult"])[0]["Weight"]));
 $templateParams["profile"] = array_merge($templateParams["profile"], array("height" => $dbh->getUserInfo($_SESSION["searchResult"])[0]["Height"]));
-$templateParams["profile"] = array_merge($templateParams["profile"], array("numFollower" => "60"));
-$templateParams["profile"] = array_merge($templateParams["profile"], array("numFollowed" => "69"));
+$templateParams["profile"] = array_merge($templateParams["profile"], array("numFollower" => count($dbh->isFollowing($_SESSION["username"], $_SESSION["searchResult"]))));
+$templateParams["profile"] = array_merge($templateParams["profile"], array("numFollowed" => count($dbh->isFollowed($_SESSION["username"], $_SESSION["searchResult"]))));
 $tmp = array("weightTarget" => $dbh->getUserInfo($_SESSION["searchResult"])[0]["WeightTarget"]);
 if ($tmp["weightTarget"] === null) {
     $templateParams["profile"] = array_merge($templateParams["profile"], array("weightTarget" => "ND"));

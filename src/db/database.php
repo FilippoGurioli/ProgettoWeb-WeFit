@@ -86,5 +86,15 @@
 			return $result->fetch_all(MYSQLI_ASSOC);
 		}
 		
+		public function isFollowed($follower, $followed) {
+			$query = "SELECT * FROM `followers` WHERE `User1`=? AND `User2`=?";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('ss', $follower, $followed);
+			$stmt->execute();
+			$result = $stmt->get_result();
+
+			return $result->fetch_all(MYSQLI_ASSOC);
+		}
+		
     }
 ?>
