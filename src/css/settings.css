@@ -25,6 +25,50 @@ input[type=button]{
 	margin: 1% 0%;
 }
 
+#user{
+	display: none;
+}
+
+#birth{
+	display: none;
+}
+
+#email{
+	display: none;
+}
+
+#weight{
+	display: none;
+}
+
+#height{
+	display: none;
+}
+
+#password{
+	display: none;
+}
+
+input[type=txtUsername]{
+	display: none;
+}
+
+input[type=txtUsername]{
+	display: none;
+}
+
+input[type=txtUsername]{
+	display: none;
+}
+
+input[type=txtUsername]{
+	display: none;
+}
+
+input[type=txtUsername]{
+	display: none;
+}
+
 .update-objective input[type=button]{
 	margin: 5% 0%;
 	margin-left: auto;
