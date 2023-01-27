@@ -64,5 +64,5 @@
     <section>
         <input type="submit" name="btnPublish" value="Pubblica!">
     </section> 
-    <a href="#">Cancella</a>
+    <a href="profile-redirector.php">Cancella</a>
 </form>
