@@ -2,10 +2,10 @@
 	<header id="badge">
 		<img src="./upload/profile_pictures/photo1ORIGINAL.jpg" alt="profile picture"/>
 		<div id="dati">
-			<h1>Matteo Rossi</h1>
-			<p>17/02/1998</p>
-			<p>Peso: 80kg</p>
-			<p>Altezza: 170cm</p>
+			<h1><?php echo $templateParams["profile"]["username"];?></h1>
+			<p><?php echo $templateParams["profile"]["birthday"];?></p>
+			<p>Peso: <?php echo $templateParams["profile"]["weight"];?>kg</p>
+			<p>Altezza: <?php echo $templateParams["profile"]["height"];?>cm</p>
 		</div>
 		<?php if(isset($isPersonalP) && $isPersonalP == true): ?>
 			<a href="settings-redirector.php"><img src="./upload/WeFitLogo.png" alt="impostazioni del profilo"></a>
@@ -13,14 +13,14 @@
 			<a href="#">➕</a>
 		<?php endif; ?>
 		<div id="link">
-			<a href="#">Follower: <label>128</label></a>
-			<a href="#">Seguiti: <label>64</label></a>
+			<a href="#">Follower: <label><?php echo $templateParams["profile"]["numFollower"];?></label></a>
+			<a href="#">Seguiti: <label><?php echo $templateParams["profile"]["numFollowed"];?></label></a>
 		</div>
 	</header>
 	<section id="obiettivo">
 		<h1>Obiettivo</h1>
-		<p>Peso: 70kg</p>
-		<p>Tempo limite: 2 mesi</p>
+		<p>Peso: <?php echo $templateParams["profile"]["weightTarget"];?>kg</p>
+		<p>Tempo limite: <?php echo $templateParams["profile"]["time"];?></p>
 	</section>
 </div>
 <div id="placeholder"></div>
