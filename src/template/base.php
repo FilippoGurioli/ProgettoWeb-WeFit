@@ -22,7 +22,7 @@
             ?>
         </main>
 		<?php 
-			if(isset($navbarVisible) && $navbarVisible == true):
+			if(isset($navbarVisible) && $navbarVisible):
 		?>
 		<nav>
 			<form id="search-bar">

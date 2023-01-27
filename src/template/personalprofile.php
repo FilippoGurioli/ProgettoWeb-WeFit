@@ -7,10 +7,14 @@
 			<p>Peso: 80kg</p>
 			<p>Altezza: 170cm</p>
 		</div>
-		<a href="settings-redirector.php"><img src="./upload/WeFitLogo.png" alt="impostazioni del profilo"></a>
+		<?php if(isset($isPersonalP) && $isPersonalP == true): ?>
+			<a href="settings-redirector.php"><img src="./upload/WeFitLogo.png" alt="impostazioni del profilo"></a>
+		<?php elseif(isset($isPersonalP) && $isPersonalP == false): ?>
+			<a href="#">➕</a>
+		<?php endif; ?>
 		<div id="link">
-			<a href="Follower.html">Follower: <label>128</label></a>
-			<a href="Seguiti.html">Seguiti: <label>64</label></a>
+			<a href="#">Follower: <label>128</label></a>
+			<a href="#">Seguiti: <label>64</label></a>
 		</div>
 	</header>
 	<section id="obiettivo">
