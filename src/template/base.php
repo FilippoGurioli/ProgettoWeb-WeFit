@@ -21,7 +21,10 @@
                 }
             ?>
         </main>
-        <nav>
+		<?php 
+			if(isset($navbarVisible) && $navbarVisible == true):
+		?>
+		<nav>
 			<form id="search-bar">
 				<input type="text" placeholder="Inserisci il nickname..."></input>
 				<button type="submit" class="btn" onCLick="startSearch()">🔎</button>
@@ -33,6 +36,7 @@
 				<li><a href="create-post-redirector.php">➕</a></li>
 			</ul>
 		</nav>
+		<?php endif; ?>
 		<?php
 		if(isset($templateParams["js"])):
 			foreach($templateParams["js"] as $script):
