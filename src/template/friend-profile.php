@@ -7,7 +7,7 @@
 			<p>Peso: 80kg</p>
 			<p>Altezza: 170cm</p>
 		</div>
-		<a href="#"><img src="./upload/WeFitLogo.png" alt="segui profilo"></a>
+		<a href="#">➕</a>
 		<div id="link">
 			<a href="Follower.html">Follower: <label>12</label></a>
 			<a href="Seguiti.html">Seguiti: <label>69</label></a>

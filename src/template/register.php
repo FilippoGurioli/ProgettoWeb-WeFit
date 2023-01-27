@@ -29,5 +29,5 @@
         </fieldset>
         <input type="submit" name="btnRegister" value="Registrati"/>
     </form>
-    <label>Hai già un account? Torna al <a href="login.php">login</a></label>
+    <label>Hai già un account? Torna al <a href="login-redirector.php">login</a></label>
 </div>
