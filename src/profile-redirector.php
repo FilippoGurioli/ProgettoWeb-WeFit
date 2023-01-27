@@ -11,8 +11,14 @@ $templateParams["profile"] = array_merge($templateParams["profile"], array("weig
 $templateParams["profile"] = array_merge($templateParams["profile"], array("height" => $dbh->getUserInfo($_SESSION["username"])[0]["Height"]));
 $templateParams["profile"] = array_merge($templateParams["profile"], array("numFollower" => "60"));
 $templateParams["profile"] = array_merge($templateParams["profile"], array("numFollowed" => "69"));
-$templateParams["profile"] = array_merge($templateParams["profile"], array("weightTarget" => "54"));
-$templateParams["profile"] = array_merge($templateParams["profile"], array("time" => "2 mesi"));
+$tmp = array("weightTarget" => $dbh->getUserInfo($_SESSION["username"])[0]["WeightTarget"]);
+if ($tmp["weightTarget"] === null) {
+    $templateParams["profile"] = array_merge($templateParams["profile"], array("weightTarget" => "ND"));
+    $templateParams["profile"] = array_merge($templateParams["profile"], array("time" => "ND"));
+} else {
+    $templateParams["profile"] = array_merge($templateParams["profile"], $tmp);
+    $templateParams["profile"] = array_merge($templateParams["profile"], array("time" => ""));
+}
 $templateParams["profile"] = array_merge($templateParams["profile"], array("profilePic" => $dbh->getUserInfo($_SESSION["username"])[0]["Photo"]));
 
 $navbarVisible = true;
