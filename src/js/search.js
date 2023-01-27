@@ -11,9 +11,7 @@ function openSearch() {
   }
 
   function startSearch() {
-    const searched = document.querySelector("#search-bar").value;
-    console.log(searched);
-    alert("ricerca php");
+    const searched = document.getElementById("searchedTxt").value;
     search(searched);
     openSearch();
   }
@@ -24,7 +22,9 @@ function openSearch() {
     axios.post('api-search.php', formData).then(response => {
 		if(response.data["successoRicerca"]) {
 			window.location.pathname = './ProgettoWeb-WeFit/src/friend-profile-redirector.php';
-		}
+		} else {
+      alert("Non esiste nessuno con quel nickname");
+    }
     });
 }
 

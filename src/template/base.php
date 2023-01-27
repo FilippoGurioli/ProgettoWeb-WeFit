@@ -26,7 +26,7 @@
 		?>
 		<nav>
 			<form id="search-bar">
-				<input type="text" placeholder="Inserisci il nickname..."></input>
+				<input type="text" id="searchedTxt" placeholder="Inserisci il nickname..."></input>
 				<button type="submit" class="btn" onCLick="startSearch()">🔎</button>
 			</form>
 			<ul>

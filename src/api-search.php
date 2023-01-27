@@ -5,7 +5,7 @@ $result["successoRicerca"] = false;
 
 if(isset($_POST["searched"])) {
   $search_result = $dbh->isPresent($_POST["searched"]);
-  if(count($login_result)!=0) {
+  if(count($search_result)!=0) {
 	  $result["successoRicerca"] = true;
   }
 }
