@@ -1,10 +1,14 @@
 <?php
 require_once 'bootstrap.php';
 
-$result["succesfullFollow"]=false;
-if(isset($_SESSION["username"]) && isset($_SESSION["searchResult"])) {
-    $dbh->follow($_SESSION["username"], $_SESSION["searchResult"]);
-	$result["succesfullFollow"]=true;
+$result["succesfulOperation"]=false;
+if(isset($_SESSION["username"]) && isset($_SESSION["searchResult"]) && isset($_POST["action"])) {
+	if ($_POST["action"] == "follow"){
+		$dbh->follow($_SESSION["username"], $_SESSION["searchResult"]);
+	} else{
+		$dbh->unfollow($_SESSION["username"], $_SESSION["searchResult"]);
+	}
+	$result["succesfulOperation"]=true;
 }
 
 header('Content-Type: application/json');

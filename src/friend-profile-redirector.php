@@ -21,6 +21,8 @@ if ($tmp["weightTarget"] === null) {
 }
 $templateParams["profile"] = array_merge($templateParams["profile"], array("profilePic" => $dbh->getUserInfo($_SESSION["searchResult"])[0]["Photo"]));
 
+$templateParams["profile"] = array_merge($templateParams["profile"], array("friend" => (count($dbh->isFollowing($_SESSION["username"], $_SESSION["searchResult"])) != 0)));
+
 $navbarVisible = true;
 $isPersonalP = false;
 

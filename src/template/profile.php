@@ -9,10 +9,10 @@
 		</div>
 		<?php if(isset($isPersonalP) && $isPersonalP == true): ?>
 			<a href="settings-redirector.php"><img src="./upload/WeFitLogo.png" alt="impostazioni del profilo"></a>
-		<?php elseif(isset($isPersonalP) && $isPersonalP == false): ?>
+		<?php elseif(isset($isPersonalP) && $isPersonalP == false && !$templateParams["profile"]["friend"]): ?>
 			<a id="btnFollow" href="#" onclick="follow();">➕</a>
-		<?php elseif(isset($isPersonalP) && $isPersonalP == false): ?>
-			<a id="btnFollow" href="#" onclick="follow();">✔</a>
+		<?php else: ?>
+			<a id="btnFollow" href="#" onclick="unfollow();">✔</a>
 		<?php endif; ?>
 		<div id="link">
 			<a href="#">Follower: <label><?php echo $templateParams["profile"]["numFollower"];?></label></a>

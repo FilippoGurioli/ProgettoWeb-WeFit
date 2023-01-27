@@ -1,7 +1,8 @@
 function follow(){
 	const formData = new FormData();
-    axios.post('api-follow.php').then(response => {
-		if(response.data["succesfulFollow"] == true){
+	formData.append('action', "follow");
+    axios.post('api-follow.php', formData).then(response => {
+		if(response.data["succesfulOperation"] == true){
 			console.log("OK");
 		}
     });
@@ -11,13 +12,13 @@ function follow(){
 }
 
 function unfollow(){
-	/*const formData = new FormData();
-    axios.post('api-follow.php').then(response => {
-		if(response.data["succesfulFollow"] == true){
+	const formData = new FormData();
+	formData.append('action', "unfollow");
+    axios.post('api-follow.php', formData).then(response => {
+		if(response.data["succesfulOperation"] == true){
 			console.log("OK");
 		}
-    });*/
-	alert("gay");
+    });
 	
 	document.getElementById("btnFollow").setAttribute("onClick", "follow();");
 	document.getElementById("btnFollow").innerHTML = "➕";
