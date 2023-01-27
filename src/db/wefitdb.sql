@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 27, 2023 alle 20:42
+-- Creato il: Gen 27, 2023 alle 22:20
 -- Versione del server: 10.4.27-MariaDB
 -- Versione PHP: 8.2.0
 
@@ -51,6 +51,14 @@ CREATE TABLE `followed` (
   `User2` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dump dei dati per la tabella `followed`
+--
+
+INSERT INTO `followed` (`User1`, `User2`) VALUES
+('Maria', 'Giulio33'),
+('Maria', 'silvia');
+
 -- --------------------------------------------------------
 
 --
@@ -61,6 +69,14 @@ CREATE TABLE `followers` (
   `User1` varchar(20) NOT NULL,
   `User2` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dump dei dati per la tabella `followers`
+--
+
+INSERT INTO `followers` (`User1`, `User2`) VALUES
+('Giulio33', 'Maria'),
+('silvia', 'Maria');
 
 -- --------------------------------------------------------
 
