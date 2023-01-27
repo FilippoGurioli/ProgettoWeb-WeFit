@@ -21,6 +21,6 @@
 </section>
 <footer>
 	<form class="back">
-		<input type="button" onclick="profile-redirector.php" value="Torna a WeFit!"></input>
+		<input type="button" onclick="window.location.pathname = './ProgettoWeb-WeFit/src/profile-redirector.php';" value="Torna a WeFit!"></input>
 	</form>
 </footer>
