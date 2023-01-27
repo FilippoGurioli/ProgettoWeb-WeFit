@@ -15,12 +15,12 @@
             </label>
                 <div id="altezza">
                     <label>Altezza<br/>
-                        <input type="number" min="0" max="250" name="altezza" required/>cm<br/>
+                        <input type="number" min="0" max="250" value="170" name="altezza" required/>cm<br/>
                     </label>
                 </div>
                 <div id="peso">
                     <label>Peso<br/>
-                        <input type="number" step="0.1" min="0" max="350" name="peso" required/>kg<br/>
+                        <input type="number" step="0.1" min="0" max="350" value="62" name="peso" required/>kg<br/>
                     </label>
                 </div>
             <label>Password<br/>
