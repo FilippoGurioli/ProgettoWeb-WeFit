@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 27, 2023 alle 22:20
+-- Creato il: Gen 28, 2023 alle 00:48
 -- Versione del server: 10.4.27-MariaDB
 -- Versione PHP: 8.2.0
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `comments` (
+  `Id` int(11) NOT NULL,
   `Post` int(11) NOT NULL,
   `Text` text NOT NULL,
   `Author` varchar(20) NOT NULL
@@ -37,8 +38,10 @@ CREATE TABLE `comments` (
 -- Dump dei dati per la tabella `comments`
 --
 
-INSERT INTO `comments` (`Post`, `Text`, `Author`) VALUES
-(1, 'Ciao!', 'Giulio33');
+INSERT INTO `comments` (`Id`, `Post`, `Text`, `Author`) VALUES
+(1, 1, 'Ciao!', 'Giulio33'),
+(2, 1, 'aaaaaa', 'Giulio33'),
+(3, 3, 'no:(', 'silvia');
 
 -- --------------------------------------------------------
 
@@ -89,6 +92,17 @@ CREATE TABLE `images` (
   `Image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dump dei dati per la tabella `images`
+--
+
+INSERT INTO `images` (`Post`, `Image`) VALUES
+(1, 'aaaa'),
+(1, 'bb'),
+(1, 'ccc'),
+(2, 'ggg'),
+(4, 'fff');
+
 -- --------------------------------------------------------
 
 --
@@ -107,7 +121,10 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`Id`, `User`, `Comment`, `Training`) VALUES
-(1, 'Maria', 'Lorem ipsum.', 'Training...');
+(1, 'Maria', 'Lorem ipsum.', 'Training...'),
+(2, 'Maria', 'Spit you love on me.', 'Am Training, stop asking'),
+(3, 'Maria', 'Oh mamamama M A R I A !', ''),
+(4, 'Giulio33', 'Il giulio.', '');
 
 -- --------------------------------------------------------
 
@@ -134,7 +151,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`Username`, `Email`, `Password`, `Birthday`, `Height`, `Weight`, `Photo`, `WeightTarget`, `Time`) VALUES
 ('Giulio33', 'giugiu@gmail.com', 'giu33', '1997-10-04', 180, 70, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
 ('Maria', 'MaryAzzurri@gmail.com', 'Mary98', '1998-01-12', 165, 55, 'profile_pictures/photo1.jpg', NULL, '00:00:00'),
-('silvia', 'brunella.battistini@virgilio.it', '123', '0000-00-00', 1, 0.1, 'profile_pictures/WeFitPic.png', NULL, '00:00:00');
+('silvia', 'brunella.battistini@virgilio.it', '123', '0000-00-00', 1, 0.1, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
+('Sonia', 'asd@g.it', 'sonia', '0000-00-00', 170, 62, './upload/profile_pictures/WeFitPic.png', NULL, NULL);
 
 --
 -- Indici per le tabelle scaricate
@@ -144,6 +162,7 @@ INSERT INTO `users` (`Username`, `Email`, `Password`, `Birthday`, `Height`, `Wei
 -- Indici per le tabelle `comments`
 --
 ALTER TABLE `comments`
+  ADD PRIMARY KEY (`Id`),
   ADD KEY `Post-Comments` (`Post`),
   ADD KEY `Comment-Authors` (`Author`);
 
@@ -187,10 +206,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT per la tabella `comments`
+--
+ALTER TABLE `comments`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT per la tabella `post`
 --
 ALTER TABLE `post`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Limiti per le tabelle scaricate
