@@ -1,12 +1,12 @@
-a[href=Settings\.html] {
+#badge > a {
     position: absolute;
     left: 90%;
-    min-width: 90px;
-    width: 14%;
+    min-width: 20px;
+    width: 8%;
     padding: 1%;
 }
 
-a[href=Settings\.html] img {
+#badge > a img {
     background-color: white;
     border-radius: 100px;
     padding: 5%;
@@ -68,7 +68,7 @@ a[href=Settings\.html] img {
 }
 
 @media (orientation: landscape) {
-    a[href=Settings\.html] {
+    #badge > a {
         top: 3%;
     }
     
@@ -113,7 +113,7 @@ a[href=Settings\.html] img {
 }
 
 @media (orientation: portrait) {
-    a[href=Settings\.html] {
+    #badge > a {
         top: 15%;
     }
 

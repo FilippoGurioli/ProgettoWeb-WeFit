@@ -27,10 +27,10 @@
 				<button type="submit" class="btn" onCLick="startSearch()">🔎</button>
 			</form>
 			<ul>
-				<li><a href="home.php" id="nav-selected">🏠</a></li>
-				<li><a href="profile.php">👨🏻‍💼</a></li>
+				<li><a href="home-redirector.php" id="nav-selected">🏠</a></li>
+				<li><a href="profile-redirector.php">👨🏻‍💼</a></li>
 				<li><input type="button" onCLick="openSearch()" value="🔎"></input></li>
-				<li><a href="create-post.php">➕</a></li>
+				<li><a href="create-post-redirector.php">➕</a></li>
 			</ul>
 		</nav>
 		<?php

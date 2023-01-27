@@ -69,6 +69,7 @@ input[name=txtExcercise] {
 }
 
 .excercise {
+    width: 10%;
     padding-left: 1%;
 }
 

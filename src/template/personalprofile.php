@@ -1,13 +1,13 @@
 <div id="badgeContainer">
 	<header id="badge">
-		<img src="./resources/profile_pictures/photo1ORIGINAL.jpg" alt="profile picture"/>
+		<img src="./upload/profile_pictures/photo1ORIGINAL.jpg" alt="profile picture"/>
 		<div id="dati">
 			<h1>Matteo Rossi</h1>
 			<p>17/02/1998</p>
 			<p>Peso: 80kg</p>
 			<p>Altezza: 170cm</p>
 		</div>
-		<a href="Settings.html"><img src="./resources/WeFitLogo.png" alt="impostazioni del profilo"></a>
+		<a href="settings-redirector.php"><img src="./upload/WeFitLogo.png" alt="impostazioni del profilo"></a>
 		<div id="link">
 			<a href="Follower.html">Follower: <label>128</label></a>
 			<a href="Seguiti.html">Seguiti: <label>64</label></a>

@@ -11,7 +11,7 @@ function login(username, password) {
     formData.append('password', password);
     axios.post('api-login.php', formData).then(response => {
 		if(response.data["logineseguito"]) {
-			window.location.pathname = './ProgettoWeb-WeFit/src/profile.php';
+			window.location.pathname = './ProgettoWeb-WeFit/src/profile-redirector.php';
 		}
     });
 }

@@ -16,7 +16,7 @@
                 <input type="submit" value="Accedi"/>
             </form>
             <label>Non sei registrato?</label>
-            <a href="Register.php"><button>Registrati</button></a>
+            <a href="register-redirector.php"><button>Registrati</button></a>
         </div>
     </div>
     <footer>By Filippo Gurioli & Silvia Furegato</footer>

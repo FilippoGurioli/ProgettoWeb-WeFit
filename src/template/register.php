@@ -2,7 +2,7 @@
     <img src="<?php echo UPLOAD_DIR.'WeFitLogo.png'; ?>" alt="Wefit logo"/>
 </header>
 <div id="form">
-    <form action="<?php $dbh->register($_POST["username"], $_POST["dataDiNascita"], $_POST["email"], $_POST["altezza"], $_POST["peso"], $_POST["password"]);?>" method="POST" name="Accesso">
+    <form action="#" method="POST" name="Accesso">
         <fieldset>
             <label>Username<br/>
                 <input type="text" name="username" id="username" required autofocus/><br/>
