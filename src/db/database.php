@@ -138,6 +138,14 @@
 			}
 			$stmt->bind_param('sssd', $_SESSION["username"], $comment, $fullTxt, $weight);
 			$stmt->execute();
+			$query = "INSERT INTO `images` (`Post`, `Image`) VALUES (?, ?);";
+			$stmt = $this->db->prepare($query);
+			$tmp = $this->getPostByAuthor($_SESSION["username"]);
+			$postId = $tmp[count($tmp)-1]["Id"];
+			foreach($images as $img) {
+				$stmt->bind_param('is', $postId, $img);
+				$stmt->execute();
+			}
 		}
 		
 		public function getFollowed($follower) {
