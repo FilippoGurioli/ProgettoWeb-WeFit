@@ -1,22 +1,28 @@
 function generatePosts(posts){
     let result = "";
     for(let i=0; i < posts.length; i++){
-        let articolo = `
-        <article>
-            <header>
-                <div>
-                    <img src="${posts[i]["imgarticolo"]}" alt="" />
-                </div>
-                <h2>${posts[i]["titoloarticolo"]}</h2>
-                <p>${articoli[i]["nome"]} - ${articoli[i]["dataarticolo"]}</p>
-            </header>
-            <section>
-                <p>${articoli[i]["anteprimaarticolo"]}</p>
-            </section>
-            <footer>
-                <a href="articolo.php?id=${articoli[i]["idarticolo"]}">Leggi tutto</a>
-            </footer>
-        </article>
+        let articolo = //`
+        <section class="post">
+			<header>
+				<div class="container">
+					<img class="profile-pic" alt="Immagine di profilo" src="./upload/profile_pictures/WeFitPic.png"/>
+					<div class="name">${posts[i]["User"]}</div>
+				</div>
+			</header>
+			<section>
+				<div class="comment">${posts[i]["Comment"]}</div>
+				<div class="training-plan"><?php echo $post["postTraining"]; ?></div>
+				<div class="photo-container">
+				<img class="photo" onCLick="openPhoto()" alt="" src="<?php echo UPLOAD_DIR.$post["postImage"]; ?>">
+				</div>
+				<div class="weight">Il peso di oggi è: <?php echo $post["weight"]; ?></div>
+			</section>
+			<footer>
+				<input class="txt-comment" type="text" placeholder="Lascia un commento..."></input>
+				<section class="comment-section">
+				</section>
+			</footer>
+		</section>
         `;
         result += articolo;
     }
@@ -25,8 +31,7 @@ function generatePosts(posts){
 
 axios.get('api-post.php').then(response => {
     console.log(response);
-	console.log("non vaaaa");
-    /*let posts = generatePosts(response.data);
+    let posts = generatePosts(response.data);
     const main = document.querySelector("main");
-    main.innerHTML = posts;*/
+    main.innerHTML = posts;
 });

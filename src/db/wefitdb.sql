@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 28, 2023 alle 00:48
+-- Creato il: Gen 28, 2023 alle 01:13
 -- Versione del server: 10.4.27-MariaDB
 -- Versione PHP: 8.2.0
 
@@ -113,18 +113,19 @@ CREATE TABLE `post` (
   `Id` int(11) NOT NULL,
   `User` varchar(20) NOT NULL,
   `Comment` text NOT NULL,
-  `Training` text NOT NULL
+  `Training` text NOT NULL,
+  `Weight` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dump dei dati per la tabella `post`
 --
 
-INSERT INTO `post` (`Id`, `User`, `Comment`, `Training`) VALUES
-(1, 'Maria', 'Lorem ipsum.', 'Training...'),
-(2, 'Maria', 'Spit you love on me.', 'Am Training, stop asking'),
-(3, 'Maria', 'Oh mamamama M A R I A !', ''),
-(4, 'Giulio33', 'Il giulio.', '');
+INSERT INTO `post` (`Id`, `User`, `Comment`, `Training`, `Weight`) VALUES
+(1, 'Maria', 'Lorem ipsum.', 'Training...', 69),
+(2, 'Maria', 'Spit you love on me.', 'Am Training, stop asking', 0),
+(3, 'Maria', 'Oh mamamama M A R I A !', '', 97.8),
+(4, 'Giulio33', 'Il giulio.', '', 110);
 
 -- --------------------------------------------------------
 
