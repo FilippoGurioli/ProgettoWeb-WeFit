@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 28, 2023 alle 01:13
+-- Creato il: Gen 28, 2023 alle 14:37
 -- Versione del server: 10.4.27-MariaDB
 -- Versione PHP: 8.2.0
 
@@ -114,7 +114,7 @@ CREATE TABLE `post` (
   `User` varchar(20) NOT NULL,
   `Comment` text NOT NULL,
   `Training` text NOT NULL,
-  `Weight` float NOT NULL
+  `Weight` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -125,7 +125,10 @@ INSERT INTO `post` (`Id`, `User`, `Comment`, `Training`, `Weight`) VALUES
 (1, 'Maria', 'Lorem ipsum.', 'Training...', 69),
 (2, 'Maria', 'Spit you love on me.', 'Am Training, stop asking', 0),
 (3, 'Maria', 'Oh mamamama M A R I A !', '', 97.8),
-(4, 'Giulio33', 'Il giulio.', '', 110);
+(4, 'Giulio33', 'Il giulio.', '', 110),
+(5, 'Sonia', 'Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. ', 'È universalmente riconosciuto che un lettore che osserva il layout di una pagina viene distratto dal contenuto testuale se questo è leggibile. ', 0),
+(6, 'Giulio33', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ', 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.', 98),
+(7, 'silvia', 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.', 70);
 
 -- --------------------------------------------------------
 
@@ -151,7 +154,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`Username`, `Email`, `Password`, `Birthday`, `Height`, `Weight`, `Photo`, `WeightTarget`, `Time`) VALUES
 ('Giulio33', 'giugiu@gmail.com', 'giu33', '1997-10-04', 180, 70, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
-('Maria', 'MaryAzzurri@gmail.com', 'Mary98', '1998-01-12', 165, 55, 'profile_pictures/photo1.jpg', NULL, '00:00:00'),
+('Maria', 'MaryAzzurri@gmail.com', 'Mary98', '1998-01-12', 165, 55, './upload/profile_pictures/photo1.jpg', NULL, '00:00:00'),
 ('silvia', 'brunella.battistini@virgilio.it', '123', '0000-00-00', 1, 0.1, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
 ('Sonia', 'asd@g.it', 'sonia', '0000-00-00', 170, 62, './upload/profile_pictures/WeFitPic.png', NULL, NULL);
 
@@ -216,7 +219,7 @@ ALTER TABLE `comments`
 -- AUTO_INCREMENT per la tabella `post`
 --
 ALTER TABLE `post`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Limiti per le tabelle scaricate
