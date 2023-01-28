@@ -126,5 +126,15 @@
         return $result->fetch_all(MYSQLI_ASSOC);
 		}
 		
+		public function getFollowing($follower) {
+			$query = "SELECT User2 FROM `followed` WHERE `User1`=?";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('s', $follower);
+			$stmt->execute();
+			$result = $stmt->get_result();
+
+			return $result->fetch_all(MYSQLI_ASSOC);
+		}
+		
     }
 ?>
