@@ -12,18 +12,18 @@
 			}
 		} elseif ($_POST["person"] == "home"){
 			$friends=$dbh->getFollowing($_SESSION["username"]);
-			$allPosts= new array();
+			$allPosts= array();
 			for($j = 0; $j < count($friends); $j++) {
 				$friendPosts=$dbh->getPostByAuthor($friends[$j]["User2"]);
 				for($k = 0; $k < count($friendPosts); $k++) {
 					array_push($allPosts,$friendPosts[$k]);
 				}
 				$result=$allPosts;
-			}/*
+			}
 			for($i = 0; $i < count($result); $i++){
 				$result[$i]["Images"] = $dbh->getPostImages($result[$i]["Id"]);
 				$result[$i]["Comments"] = $dbh->getPostComments($result[$i]["Id"]);
-			}*/
+			}
 		}
 	}
 	
