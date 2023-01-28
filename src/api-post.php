@@ -19,6 +19,7 @@
 					array_push($allPosts,$friendPosts[$k]);
 				}
 				$result=$allPosts;
+				
 			}
 			for($i = 0; $i < count($result); $i++){
 				$result[$i]["Images"] = $dbh->getPostImages($result[$i]["Id"]);
@@ -33,4 +34,18 @@
 	
 	header('Content-Type: application/json');
 	echo json_encode($result);
+	
+	//to-do order posts
+	function orderPosts($postToOrder){
+		$temp=$postToOrder[0]["Id"];
+		for ($p = 1; $p < count($postToOrder); $p++){
+			if($postToOrder[$p]["Id"] > temp){
+				
+			}
+		}
+		
+		return usort($postToOrder, "cmp");
+	}
+
+	
 ?>
