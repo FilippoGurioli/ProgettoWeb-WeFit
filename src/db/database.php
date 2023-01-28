@@ -129,11 +129,12 @@
 		public function createPost($comment, $images, $exercises, $weight) {
 			$query = "INSERT INTO `post` (`Id`, `User`, `Comment`, `Training`, `Weight`) VALUES (NULL, ?, ?, ?, ?);";
 			$stmt = $this->db->prepare($query);
+			$fullTxt = "";
 			foreach($exercises as $ex) {
 				foreach($ex as $value) {
-					$fullTxt .= $value."\\";
+					$fullTxt .= $value;
 				}
-				$fullTxt.= "\n";
+				$fullTxt .= "\n";
 			}
 			$stmt->bind_param('sssd', $_SESSION["username"], $comment, $fullTxt, $weight);
 			$stmt->execute();

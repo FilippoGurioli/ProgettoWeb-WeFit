@@ -87,7 +87,7 @@ document.getElementById("publishBtnContainer").addEventListener("submit", functi
     if (document.getElementById("comment").value != "") {
         comment = document.getElementById("comment").value;
     }
-    if (post.length == 0) {
+    if (comment == "" && exercises.length == 0 && images.length == 0) {
         alert("Devi compilare almeno uno dei 3 campi");
     }
     if (document.getElementById("nbrPeso").value != "") {
@@ -103,10 +103,12 @@ function createPost(comment, weight) {
         formData.append('images[]', e);
     });
     exercises.forEach(e => {
-        formData.append('exercises[]', e);
+        formData.append('exercises[][]', e);
     });
     formData.append('weight', weight);
     axios.post('api-create-post.php', formData).then(response => {
-        window.location.pathname = './ProgettoWeb-WeFit/src/profile-redirector.php';
+        if (!response.data["error"]) {
+            window.location.pathname = './ProgettoWeb-WeFit/src/profile-redirector.php';
+        }
     });
 }
