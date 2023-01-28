@@ -1,10 +1,11 @@
 <?php
 require_once 'bootstrap.php';
 
+$_SESSION["page"] = "personal";
 $templateParams["titolo"] = "WeFit - Personal Profile";
 $templateParams["nome"] = "profile.php";
 $templateParams["css"] = array("dark-background", "navbar", "post", "profile");
-$templateParams["js"] = array("https://unpkg.com/axios/dist/axios.min.js","js/search.js");
+$templateParams["js"] = array("https://unpkg.com/axios/dist/axios.min.js","js/search.js","js/post.js");
 $templateParams["profile"] = array("username" => $_SESSION["username"]);
 $templateParams["profile"] = array_merge($templateParams["profile"], array("birthday" => $dbh->getUserInfo($_SESSION["username"])[0]["Birthday"]));
 $templateParams["profile"] = array_merge($templateParams["profile"], array("weight" => $dbh->getUserInfo($_SESSION["username"])[0]["Weight"]));
