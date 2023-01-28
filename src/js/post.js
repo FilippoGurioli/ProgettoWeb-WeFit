@@ -12,9 +12,13 @@ function generatePosts(posts){
 			<section>
 				<div class="comment">${posts[i]["Comment"]}</div>
 				<div class="training-plan">${posts[i]["Training"]}</div>
-				<div class="photo-container">
-					<img class="photo" onCLick="openPhoto()" alt="" src="">
-				</div>
+				<div class="photo-container">`;
+		
+			for(let j = 0; j < posts[i]["Images"].length; j++){
+				post += `<img class="photo" alt="" src="` + posts[i]["Images"][j]["Image"] + `"/>`;
+			}
+			
+			post +=	`</div>
 				<div class="weight">Il peso di oggi è: ${posts[i]["Weight"]}</div>
 			</section>
 			<footer>
