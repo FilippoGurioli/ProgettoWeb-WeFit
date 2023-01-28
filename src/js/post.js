@@ -15,7 +15,7 @@ function generatePosts(posts){
 				<div class="photo-container">`;
 		
 			for(let j = 0; j < posts[i]["Images"].length; j++){
-				post += `<img class="photo" alt="" src="` + posts[i]["Images"][j]["Image"] + `"/>`;
+				post += `<img class="photo" alt="" src="./upload/` + posts[i]["Images"][j]["Image"] + `"/>`;
 			}
 			
 			post +=	`</div>
