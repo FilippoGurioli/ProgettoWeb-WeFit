@@ -34,13 +34,7 @@ let status = "home";
 formData.append('person', status);
 axios.post('api-post.php', formData).then(response => {
     console.log(response);
-	if (status == "user") {
-		let posts = generatePosts(response.data);
-		const main = document.querySelector("main");
-	} else {
-		let posts = generatePosts(response.data);
-		const main = document.querySelector("main");
-	}
-    
+	let posts = generatePosts(response.data);
+	const main = document.querySelector("main");
     main.innerHTML = posts;
 });
