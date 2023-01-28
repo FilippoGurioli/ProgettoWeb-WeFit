@@ -5,7 +5,7 @@ function generatePosts(posts){
         <section class="post">
 			<header>
 				<div class="container">
-					<img class="profile-pic" alt="Immagine di profilo" src="./upload/profile_pictures/WeFitPic.png"/>
+					<img class="profile-pic" alt="Immagine di profilo" src="${posts[i]["Photo"]}"/>
 					<div class="name">${posts[i]["User"]}</div>
 				</div>
 			</header>
@@ -30,10 +30,17 @@ function generatePosts(posts){
 }
 
 const formData = new FormData();
-formData.append('person', "user");
+let status = "home";
+formData.append('person', status);
 axios.post('api-post.php', formData).then(response => {
     console.log(response);
-    let posts = generatePosts(response.data);
-    const main = document.querySelector("main");
+	if (status == "user") {
+		let posts = generatePosts(response.data);
+		const main = document.querySelector("main");
+	} else {
+		let posts = generatePosts(response.data);
+		const main = document.querySelector("main");
+	}
+    
     main.innerHTML = posts;
 });
