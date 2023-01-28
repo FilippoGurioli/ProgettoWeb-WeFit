@@ -170,6 +170,7 @@ a {
 
     #training-plan-fields input {
         font-size: 120%;
+        margin: 3% 0%;
     }
 
     #images-fields input[type=file] {

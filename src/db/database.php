@@ -97,34 +97,46 @@
 		}
 		
 		public function getPostByAuthor($user){
-        $query = "SELECT * FROM post WHERE User=?";
-        $stmt = $this->db->prepare($query);
-        $stmt->bind_param('s',$user);
-        $stmt->execute();
-        $result = $stmt->get_result();
+			$query = "SELECT * FROM post WHERE User=?";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('s',$user);
+			$stmt->execute();
+			$result = $stmt->get_result();
 
-        return $result->fetch_all(MYSQLI_ASSOC);
+			return $result->fetch_all(MYSQLI_ASSOC);
 		}
 		
 		public function getPostImages($postId){
-        $query = "SELECT * FROM images WHERE Post=?";
-        $stmt = $this->db->prepare($query);
-        $stmt->bind_param('i',$postId);
-        $stmt->execute();
-        $result = $stmt->get_result();
+			$query = "SELECT * FROM images WHERE Post=?";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('i',$postId);
+			$stmt->execute();
+			$result = $stmt->get_result();
 
-        return $result->fetch_all(MYSQLI_ASSOC);
+			return $result->fetch_all(MYSQLI_ASSOC);
 		}
 		
 		public function getPostComments($postId){
-        $query = "SELECT * FROM comments WHERE Post=?";
-        $stmt = $this->db->prepare($query);
-        $stmt->bind_param('i',$postId);
-        $stmt->execute();
-        $result = $stmt->get_result();
+			$query = "SELECT * FROM comments WHERE Post=?";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('i',$postId);
+			$stmt->execute();
+			$result = $stmt->get_result();
 
-        return $result->fetch_all(MYSQLI_ASSOC);
+			return $result->fetch_all(MYSQLI_ASSOC);
 		}
-		
+
+		public function createPost($comment, $images, $exercises, $weight) {
+			$query = "INSERT INTO `post` (`Id`, `User`, `Comment`, `Training`, `Weight`) VALUES (NULL, ?, ?, ?, ?);";
+			$stmt = $this->db->prepare($query);
+			foreach($exercises as $ex) {
+				foreach($ex as $value) {
+					$fullTxt .= $value."\\";
+				}
+				$fullTxt.= "\n";
+			}
+			$stmt->bind_param('sssd', $_SESSION["username"], $comment, $fullTxt, $weight);
+			$stmt->execute();
+		}
     }
 ?>

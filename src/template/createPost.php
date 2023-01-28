@@ -4,7 +4,7 @@
 <form id="comment-fields" class="forms" method="POST" action="#">
     <label>
         <b>Inserisci un commento:</b>
-        <textarea type="text" name="comment"></textarea>
+        <textarea type="text" id="comment" name="comment"></textarea>
     </label>
 </form>
 <form id="images-fields" class="forms" method="POST" action="#">
@@ -38,7 +38,7 @@
             </label>
             <label>
                 Tempo riposo:
-                <input type="number" min="0" value="0.50" step="0.1" class="excercise" id="nbrRestingTime" name="nbrRestingTime"/>
+                <input type="number" min="0" value="1" step="0.1" class="excercise" id="nbrRestingTime" name="nbrRestingTime"/>
                 <span>min</span>
             </label>
         </div>
@@ -57,11 +57,11 @@
 <form id="weight-fields" class="forms" method="POST" action="#">
     <label>
         <b>Inserisci il tuo peso attuale:</b>
-        <input type="number" min="0" value="62" max="350" name="nbrPeso"/>
+        <input type="number" min="0" max="350" step="0.1" id="nbrPeso" name="nbrPeso"/>
         <span>kg</span>
     </label>
 </form>
-<section id="publishBtnContainer">
+<form id="publishBtnContainer" action="#" method="POST">
     <input type="submit" name="btnPublish" value="Pubblica!"/>
-</section>
+</form>
 <a href="profile-redirector.php">Cancella</a>

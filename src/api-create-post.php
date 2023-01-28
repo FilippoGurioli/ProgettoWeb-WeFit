@@ -1,14 +1,11 @@
 <?php
 require_once 'bootstrap.php';
 
-$result["postPubblicato"] = false;
+$result["error"] = true;
 
-if(isset($_POST["username"]) && isset($_POST["password"])) {
-	$login_result = $dbh->checkLogin($_POST["username"], $_POST["password"]);
-	if(count($login_result)!=0) {
-		$result["logineseguito"] = true;
-		$_SESSION["username"] = $login_result[0]["Username"];
-	}
+if(isset($_POST["comment"]) && isset($_POST["images"]) && isset($_POST["exercises"]) && isset($_POST["weight"])) {
+	$dbh->createPost($_POST["comment"], $_POST["images"], $_POST["exercises"], $_POST["weight"]);
+	$result["error"] = false;
 }
 
 header('Content-Type: application/json');
