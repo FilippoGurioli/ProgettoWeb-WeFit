@@ -11,7 +11,7 @@
 				$result[$i]["Comments"] = $dbh->getPostComments($result[$i]["Id"]);
 			}
 		} elseif ($_POST["person"] == "home"){
-			$friends=$dbh->getFollowing($_SESSION["username"]);
+			$friends=$dbh->getFollowed($_SESSION["username"]);
 			$allPosts= array();
 			for($j = 0; $j < count($friends); $j++) {
 				$friendPosts=$dbh->getPostByAuthor($friends[$j]["User2"]);

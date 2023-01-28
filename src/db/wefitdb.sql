@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 28, 2023 alle 14:37
+-- Creato il: Gen 28, 2023 alle 15:15
 -- Versione del server: 10.4.27-MariaDB
 -- Versione PHP: 8.2.0
 
@@ -154,9 +154,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`Username`, `Email`, `Password`, `Birthday`, `Height`, `Weight`, `Photo`, `WeightTarget`, `Time`) VALUES
 ('Giulio33', 'giugiu@gmail.com', 'giu33', '1997-10-04', 180, 70, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
-('Maria', 'MaryAzzurri@gmail.com', 'Mary98', '1998-01-12', 165, 55, './upload/profile_pictures/photo1.jpg', NULL, '00:00:00'),
+('Maria', 'MaryAzzurri@gmail.com', 'Mary98', '1998-01-12', 165, 55, 'profile_pictures/photo1.jpg', NULL, '00:00:00'),
 ('silvia', 'brunella.battistini@virgilio.it', '123', '0000-00-00', 1, 0.1, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
-('Sonia', 'asd@g.it', 'sonia', '0000-00-00', 170, 62, './upload/profile_pictures/WeFitPic.png', NULL, NULL);
+('Sonia', 'asd@g.it', 'sonia', '0000-00-00', 170, 62, 'profile_pictures/WeFitPic.png', NULL, NULL);
 
 --
 -- Indici per le tabelle scaricate
