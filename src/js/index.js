@@ -1,7 +1,7 @@
 function generatePosts(posts){
     let result = "";
     for(let i=0; i < posts.length; i++){
-        let articolo = //`
+        let post = `
         <section class="post">
 			<header>
 				<div class="container">
@@ -11,11 +11,11 @@ function generatePosts(posts){
 			</header>
 			<section>
 				<div class="comment">${posts[i]["Comment"]}</div>
-				<div class="training-plan"><?php echo $post["postTraining"]; ?></div>
+				<div class="training-plan">${posts[i]["Training"]}</div>
 				<div class="photo-container">
-				<img class="photo" onCLick="openPhoto()" alt="" src="<?php echo UPLOAD_DIR.$post["postImage"]; ?>">
+					<img class="photo" onCLick="openPhoto()" alt="" src="">
 				</div>
-				<div class="weight">Il peso di oggi è: <?php echo $post["weight"]; ?></div>
+				<div class="weight">Il peso di oggi è: ${posts[i]["Weight"]}</div>
 			</section>
 			<footer>
 				<input class="txt-comment" type="text" placeholder="Lascia un commento..."></input>
@@ -24,12 +24,14 @@ function generatePosts(posts){
 			</footer>
 		</section>
         `;
-        result += articolo;
+        result += post;
     }
     return result;
 }
 
-axios.get('api-post.php').then(response => {
+const formData = new FormData();
+formData.append('person', "user");
+axios.post('api-post.php', formData).then(response => {
     console.log(response);
     let posts = generatePosts(response.data);
     const main = document.querySelector("main");
