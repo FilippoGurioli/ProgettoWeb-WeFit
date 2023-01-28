@@ -98,6 +98,12 @@ document.getElementById("publishBtnContainer").addEventListener("submit", functi
 
 function createPost(comment, weight) {
     const formData = new FormData();
+    if (images.length == 0) {
+        images.push("");
+    }
+    if (exercises.length == 0) {
+        exercises.push(new Array(""));
+    }
     formData.append('comment', comment);
     images.forEach(e => {
         formData.append('images[]', e);
