@@ -2,7 +2,7 @@
 require_once 'bootstrap.php';
 
 $_SESSION["page"] = "friend";
-$templateParams["titolo"] = "WeFit - Friend Profile";
+$templateParams["titolo"] = "WeFit - Profilo";
 $templateParams["nome"] = "profile.php";
 $templateParams["css"] = array("dark-background", "navbar", "post", "profile");
 $templateParams["js"] = array("https://unpkg.com/axios/dist/axios.min.js","js/search.js","js/follow.js","js/post.js");
