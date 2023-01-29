@@ -13,12 +13,12 @@ function generateNotifications(data) {
         result += "./upload/"+data[i]["Photo"];
             
         result += `" alt="foto profilo"/>
-            <p class="name">`;
+            <p style="font-weight: bold;">`;
             
         result += data[i]["Author"];
         result +=`
             </p>
-            <p class="type">`;
+            <p>`;
         if (data[i]["Type"] == "follow") {
             result += "ha iniziato a seguirti!";
         } else if (data[i]["Type"] == "comment") {

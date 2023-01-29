@@ -5,6 +5,7 @@ $result["succesfulOperation"]=false;
 if(isset($_SESSION["username"]) && isset($_SESSION["searchResult"]) && isset($_POST["action"])) {
 	if ($_POST["action"] == "follow"){
 		$dbh->follow($_SESSION["username"], $_SESSION["searchResult"]);
+		$dbh->followNotification($_SESSION["searchResult"], $_SESSION["username"]);
 	} else{
 		$dbh->unfollow($_SESSION["username"], $_SESSION["searchResult"]);
 	}
