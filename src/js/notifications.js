@@ -6,7 +6,7 @@ axios.get('api-notifications.php').then(response => {
 
 function generateNotifications(data) {
     let result = "";
-    for (let i = 0; i < data.length; i++) {
+    for (let i = data.length-1; i >= 0; i--) {
         result += `
         <section class="row">
             <img src="`;
