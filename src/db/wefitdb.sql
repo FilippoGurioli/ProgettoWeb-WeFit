@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 28, 2023 alle 15:15
+-- Creato il: Gen 29, 2023 alle 16:19
 -- Versione del server: 10.4.27-MariaDB
 -- Versione PHP: 8.2.0
 
@@ -41,7 +41,11 @@ CREATE TABLE `comments` (
 INSERT INTO `comments` (`Id`, `Post`, `Text`, `Author`) VALUES
 (1, 1, 'Ciao!', 'Giulio33'),
 (2, 1, 'aaaaaa', 'Giulio33'),
-(3, 3, 'no:(', 'silvia');
+(3, 3, 'no:(', 'silvia'),
+(4, 4, 'Lo sapevo...', 'Sonia'),
+(5, 4, 'Sei proprio fake :(', 'Maria'),
+(6, 4, 'Lavati nel fuoco!!!', 'silvia'),
+(7, 7, 'aaaaaaaaaaa', 'Giulio33');
 
 -- --------------------------------------------------------
 
@@ -88,6 +92,7 @@ INSERT INTO `followers` (`User1`, `User2`) VALUES
 --
 
 CREATE TABLE `images` (
+  `Id` int(11) NOT NULL,
   `Post` int(11) NOT NULL,
   `Image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -96,12 +101,12 @@ CREATE TABLE `images` (
 -- Dump dei dati per la tabella `images`
 --
 
-INSERT INTO `images` (`Post`, `Image`) VALUES
-(1, 'aaaa'),
-(1, 'bb'),
-(1, 'ccc'),
-(2, 'ggg'),
-(4, 'fff');
+INSERT INTO `images` (`Id`, `Post`, `Image`) VALUES
+(1, 1, '/WeFitImg.jpg'),
+(2, 1, '/WeFitImg.jpg'),
+(3, 1, '/WeFitImg.jpg'),
+(4, 2, '/WeFitImg.jpg'),
+(5, 4, '/WeFItImg.jpg');
 
 -- --------------------------------------------------------
 
@@ -155,7 +160,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`Username`, `Email`, `Password`, `Birthday`, `Height`, `Weight`, `Photo`, `WeightTarget`, `Time`) VALUES
 ('Giulio33', 'giugiu@gmail.com', 'giu33', '1997-10-04', 180, 70, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
 ('Maria', 'MaryAzzurri@gmail.com', 'Mary98', '1998-01-12', 165, 55, 'profile_pictures/photo1.jpg', NULL, '00:00:00'),
-('silvia', 'brunella.battistini@virgilio.it', '123', '0000-00-00', 1, 0.1, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
+('silvia', 'brunella.battistini@virgilio.it', '123', '2001-10-19', 1, 0.1, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
 ('Sonia', 'asd@g.it', 'sonia', '0000-00-00', 170, 62, 'profile_pictures/WeFitPic.png', NULL, NULL);
 
 --
@@ -190,6 +195,7 @@ ALTER TABLE `followers`
 -- Indici per le tabelle `images`
 --
 ALTER TABLE `images`
+  ADD PRIMARY KEY (`Id`),
   ADD KEY `Post-Images` (`Post`);
 
 --
@@ -213,7 +219,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT per la tabella `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT per la tabella `images`
+--
+ALTER TABLE `images`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT per la tabella `post`
