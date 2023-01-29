@@ -15,7 +15,7 @@
 			<a id="btnFollow" href="#" onclick="unfollow();">✔</a>
 		<?php endif; ?>
 		<div id="link">
-			<a href="#">Follower: <label><?php echo $templateParams["profile"]["numFollower"];?></label></a>
+			<a href="follower-redirector.php">Follower: <label><?php echo $templateParams["profile"]["numFollower"];?></label></a>
 			<a href="#">Seguiti: <label><?php echo $templateParams["profile"]["numFollowed"];?></label></a>
 		</div>
 	</header>
