@@ -1,5 +1,5 @@
 function follow(){
-	const formData = new FormData();
+	let formData = new FormData();
 	formData.append('action', "follow");
     axios.post('api-follow.php', formData).then(response => {
 		if(response.data["succesfulOperation"] == true){

@@ -185,5 +185,21 @@
 			$result = $stmt->get_result();
 			return $result->fetch_all(MYSQLI_ASSOC)[0]["MAX(Id)"];
 		}
+
+		public function getNotifications($user) {
+			$query = "SELECT `Type`, `Author` FROM `notifications` WHERE `User`=?";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('s', $user);
+			$stmt->execute();
+			$result = $stmt->get_result();
+			return $result->fetch_all(MYSQLI_ASSOC);
+		}
+
+		public function followNotification($user, $author) {
+			$query = "INSERT INTO `notifications` (`Id`, `User`, `Type`, `Author`) VALUES (NULL, ?, 'follow', ?);";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('ss', $user, $author);
+			$stmt->execute();
+		}
     }
 ?>
