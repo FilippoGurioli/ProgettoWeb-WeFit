@@ -11,7 +11,9 @@
 		
 		public function register($user, $birth, $email, $height, $weight, $password) {
             $stmt = $this->db->prepare("INSERT INTO `users` (`Username`, `Email`, `Password`, `Photo`, `Birthday`, `Height`, `Weight`) VALUES (?, ?, ?, './upload/profile_pictures/WeFitPic.png', ?, ?, ?);");
-            $stmt->bind_param('sssidd', $user, $email, $password, $birth, $height, $weight);
+            $birth = strtotime($birth);
+			$birthSQL = date('Y-m-d', $birth);
+			$stmt->bind_param('ssssdd', $user, $email, $password, $birthSQL, $height, $weight);
             $stmt->execute();
 		}
 		
@@ -45,6 +47,7 @@
 			return $result->fetch_all(MYSQLI_ASSOC);
 		}
 		
+		//NOT IN USE - Settings
 		public function updateUser($new, $old, $param) {
 			$query = "UPDATE `users` SET ? = ? WHERE `users`.? = ?;";
 			$stmt = $this->db->prepare($query);
@@ -166,6 +169,13 @@
 			$result = $stmt->get_result();
 
 			return $result->fetch_all(MYSQLI_ASSOC);
+		}
+
+		public function insertComment($author, $post, $text) {
+			$query = "INSERT INTO `comments` (`Id`, `Post`, `Text`, `Author`) VALUES (NULL, ?, ?, ?);";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('iss', $post, $text, $author);
+			$stmt->execute();
 		}
     }
 ?>
