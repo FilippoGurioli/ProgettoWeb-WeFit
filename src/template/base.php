@@ -32,6 +32,7 @@
 			<ul>
 				<li><a href="home-redirector.php" id="nav-selected">🏠</a></li>
 				<li><a href="profile-redirector.php">👨🏻‍💼</a></li>
+				<li><a href="notifications-redirector.php">📨</a></li>
 				<li><input type="button" onCLick="openSearch()" value="🔎"></input></li>
 				<li><a href="create-post-redirector.php">➕</a></li>
 			</ul>
