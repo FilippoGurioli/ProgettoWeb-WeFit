@@ -3,7 +3,7 @@
 		
 	$_SESSION["page"] = "notifications";
 	$templateParams["titolo"] = "WeFit - Notifiche";
-    $templateParams["nome"] = "notifications.php";
+    $templateParams["nome"] = "board.php";
 	$templateParams["js"] = array("https://unpkg.com/axios/dist/axios.min.js","js/notifications.js");
 	$templateParams["css"] = array("dark-background", "navbar", "notifications");
 	
