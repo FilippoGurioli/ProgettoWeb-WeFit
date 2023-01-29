@@ -115,7 +115,7 @@ function createPost(comment, weight) {
     formData.append('weight', weight);
     axios.post('api-create-post.php', formData).then(response => {
         if (!response.data["error"]) {
-            window.location.pathname = './ProgettoWeb-WeFit/src/profile-redirector.php';
+           window.location.pathname = './ProgettoWeb-WeFit/src/profile-redirector.php';
         }
     });
 }
