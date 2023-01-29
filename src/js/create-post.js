@@ -87,13 +87,14 @@ document.getElementById("publishBtnContainer").addEventListener("submit", functi
     if (document.getElementById("comment").value != "") {
         comment = document.getElementById("comment").value;
     }
-    if (comment == "" && exercises.length == 0 && images.length == 0) {
-        alert("Devi compilare almeno uno dei 3 campi");
-    }
     if (document.getElementById("nbrPeso").value != "") {
         weight = document.getElementById("nbrPeso").value;
     }
-    createPost(comment, weight);
+    if (comment == "" && exercises.length == 0 && images.length == 0) {
+        alert("Devi compilare almeno uno dei 3 campi");
+    } else {
+        createPost(comment, weight);
+    }
 });
 
 function createPost(comment, weight) {
