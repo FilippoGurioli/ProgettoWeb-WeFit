@@ -6,3 +6,11 @@
     border-bottom: 3px solid black;
     border-radius: 0px;
 }
+
+.notification {
+    display: block;
+}
+
+.photo {
+    width: 50px;
+}
