@@ -2,8 +2,14 @@
 	require_once 'bootstrap.php';
 
     $result["getFollowers"] = false;
-	if (isset($_SESSION["page"]) && $_SESSION["page"] == "followers"){
+	if (isset($_SESSION["page"]) && $_SESSION["page"] == "personalfollowers"){
 		$result["allFollowers"] = $dbh->getFollowers($_SESSION["username"]);
+        for($i = 0; $i < count($result["allFollowers"]); $i++){
+            $result["allFollowers"][$i]["Photo"] = $dbh->getUserInfo($result["allFollowers"][$i]["User2"])[0]["Photo"];
+        }
+        $result["getFollowers"] = true;
+	} elseif (isset($_SESSION["page"]) && $_SESSION["page"] == "friendfollowers") {
+		$result["allFollowers"] = $dbh->getFollowers($_SESSION["searchResult"]);
         for($i = 0; $i < count($result["allFollowers"]); $i++){
             $result["allFollowers"][$i]["Photo"] = $dbh->getUserInfo($result["allFollowers"][$i]["User2"])[0]["Photo"];
         }

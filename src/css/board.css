@@ -1,5 +1,5 @@
 #title{
-    background-color: orange;
+    background-color: #fa981d;
     color: white;
     padding: 5%;
     border-radius: 0;
@@ -10,7 +10,7 @@
     background-color: white;
     margin: 2%;
     padding: 3%;
-    border: 5px outset orange;
+    border: 5px outset #fa981d;
     display: flex;
     justify-content: flex-start;
     align-items: center;

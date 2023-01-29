@@ -4,7 +4,7 @@ require_once 'bootstrap.php';
 $_SESSION["page"] = "friend";
 $templateParams["titolo"] = "WeFit - Profilo";
 $templateParams["nome"] = "profile.php";
-$templateParams["css"] = array("dark-background", "navbar", "post", "profile");
+$templateParams["css"] = array("dark-background", "navbar", "post", "profile", "board");
 $templateParams["js"] = array("https://unpkg.com/axios/dist/axios.min.js","js/search.js","js/follow.js","js/post.js");
 $templateParams["profile"] = array("username" => $_SESSION["searchResult"]);
 $templateParams["profile"] = array_merge($templateParams["profile"], array("birthday" => $dbh->getUserInfo($_SESSION["searchResult"])[0]["Birthday"]));
