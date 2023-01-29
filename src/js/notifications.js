@@ -8,11 +8,11 @@ function generateNotifications(data) {
     let result = "";
     for (let i = 0; i < data.length; i++) {
         result += `
-        <section class="notification">
+        <section class="row">
             <img src="`;
         result += "./upload/"+data[i]["Photo"];
             
-        result += `" class="photo" alt="foto profilo"/>
+        result += `" alt="foto profilo"/>
             <p class="name">`;
             
         result += data[i]["Author"];
