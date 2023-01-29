@@ -47,6 +47,7 @@
 			return $result->fetch_all(MYSQLI_ASSOC);
 		}
 		
+		//NOT IN USE - Settings
 		public function updateUser($new, $old, $param) {
 			$query = "UPDATE `users` SET ? = ? WHERE `users`.? = ?;";
 			$stmt = $this->db->prepare($query);
@@ -168,6 +169,13 @@
 			$result = $stmt->get_result();
 
 			return $result->fetch_all(MYSQLI_ASSOC);
+		}
+
+		public function insertComment($author, $post, $text) {
+			$query = "INSERT INTO `comments` (`Id`, `Post`, `Text`, `Author`) VALUES (NULL, ?, ?, ?);";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('iss', $post, $text, $author);
+			$stmt->execute();
 		}
     }
 ?>
