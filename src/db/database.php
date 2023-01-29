@@ -141,7 +141,7 @@
 			}
 			$stmt->bind_param('sssd', $_SESSION["username"], $comment, $fullTxt, $weight);
 			$stmt->execute();
-			$query = "INSERT INTO `images` (`Post`, `Image`) VALUES (?, ?);";
+			$query = "INSERT INTO `images` (`Id`, `Post`, `Image`) VALUES (NULL, ?, ?);";
 			$stmt = $this->db->prepare($query);
 			$tmp = $this->getPostByAuthor($_SESSION["username"]);
 			$postId = $tmp[count($tmp)-1]["Id"];
@@ -176,6 +176,14 @@
 			$stmt = $this->db->prepare($query);
 			$stmt->bind_param('iss', $post, $text, $author);
 			$stmt->execute();
+		}
+
+		public function nextImageId() {
+			$query = "SELECT MAX(Id) FROM `images`;";
+			$stmt = $this->db->prepare($query);
+			$stmt->execute();
+			$result = $stmt->get_result();
+			return $result->fetch_all(MYSQLI_ASSOC)[0]["MAX(Id)"];
 		}
     }
 ?>
