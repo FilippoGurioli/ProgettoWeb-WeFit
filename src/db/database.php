@@ -11,7 +11,9 @@
 		
 		public function register($user, $birth, $email, $height, $weight, $password) {
             $stmt = $this->db->prepare("INSERT INTO `users` (`Username`, `Email`, `Password`, `Photo`, `Birthday`, `Height`, `Weight`) VALUES (?, ?, ?, './upload/profile_pictures/WeFitPic.png', ?, ?, ?);");
-            $stmt->bind_param('sssidd', $user, $email, $password, $birth, $height, $weight);
+            $birth = strtotime($birth);
+			$birthSQL = date('Y-m-d', $birth);
+			$stmt->bind_param('ssssdd', $user, $email, $password, $birthSQL, $height, $weight);
             $stmt->execute();
 		}
 		
