@@ -1,0 +1,19 @@
+.row{
+    background-color: white;
+    margin: 2%;
+    padding: 3%;
+    border: 5px outset orange;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.row img{
+    width: 10%;
+}
+
+.row p{
+    font-size: 5vw;
+    margin-left: 2%;
+}
