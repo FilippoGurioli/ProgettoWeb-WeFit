@@ -3,7 +3,7 @@
 
     $templateParams["titolo"] = "WeFit - Followers";
     $templateParams["nome"] = "board.php";
-    $templateParams["css"] = array("dark-background", "navbar", "get-followers");
+    $templateParams["css"] = array("dark-background", "navbar", "board");
     $templateParams["js"] = array("https://unpkg.com/axios/dist/axios.min.js","js/getFollowers.js");
 
     $_SESSION["page"] = "followers";

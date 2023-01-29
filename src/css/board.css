@@ -1,3 +1,11 @@
+#title{
+    background-color: orange;
+    color: white;
+    padding: 5%;
+    border-radius: 0;
+    font-size: 8vw;
+}
+
 .row{
     background-color: white;
     margin: 2%;
@@ -16,4 +24,19 @@
 .row p{
     font-size: 5vw;
     margin-left: 2%;
+}
+
+@media (min-width: 1000px) {
+    #title{
+        font-size: 4vw;
+        padding: 2%;
+    }
+    
+    .row img{
+        width: 5%;
+    }
+    
+    .row p{
+        font-size: 2vw;
+    }
 }
