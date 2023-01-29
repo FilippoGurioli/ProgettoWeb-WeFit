@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 29, 2023 alle 16:19
+-- Creato il: Gen 29, 2023 alle 19:59
 -- Versione del server: 10.4.27-MariaDB
 -- Versione PHP: 8.2.0
 
@@ -33,19 +33,6 @@ CREATE TABLE `comments` (
   `Text` text NOT NULL,
   `Author` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dump dei dati per la tabella `comments`
---
-
-INSERT INTO `comments` (`Id`, `Post`, `Text`, `Author`) VALUES
-(1, 1, 'Ciao!', 'Giulio33'),
-(2, 1, 'aaaaaa', 'Giulio33'),
-(3, 3, 'no:(', 'silvia'),
-(4, 4, 'Lo sapevo...', 'Sonia'),
-(5, 4, 'Sei proprio fake :(', 'Maria'),
-(6, 4, 'Lavati nel fuoco!!!', 'silvia'),
-(7, 7, 'aaaaaaaaaaa', 'Giulio33');
 
 -- --------------------------------------------------------
 
@@ -97,16 +84,26 @@ CREATE TABLE `images` (
   `Image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
 --
--- Dump dei dati per la tabella `images`
+-- Struttura della tabella `notifications`
 --
 
-INSERT INTO `images` (`Id`, `Post`, `Image`) VALUES
-(1, 1, '/WeFitImg.jpg'),
-(2, 1, '/WeFitImg.jpg'),
-(3, 1, '/WeFitImg.jpg'),
-(4, 2, '/WeFitImg.jpg'),
-(5, 4, '/WeFItImg.jpg');
+CREATE TABLE `notifications` (
+  `Id` int(11) NOT NULL,
+  `User` varchar(20) NOT NULL,
+  `Type` varchar(20) NOT NULL,
+  `Author` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dump dei dati per la tabella `notifications`
+--
+
+INSERT INTO `notifications` (`Id`, `User`, `Type`, `Author`) VALUES
+(1, 'Fornero El Bombero', 'follow', 'Giulio33'),
+(2, 'silvia', 'follow', 'Fornero El Bombero');
 
 -- --------------------------------------------------------
 
@@ -121,19 +118,6 @@ CREATE TABLE `post` (
   `Training` text NOT NULL,
   `Weight` float DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dump dei dati per la tabella `post`
---
-
-INSERT INTO `post` (`Id`, `User`, `Comment`, `Training`, `Weight`) VALUES
-(1, 'Maria', 'Lorem ipsum.', 'Training...', 69),
-(2, 'Maria', 'Spit you love on me.', 'Am Training, stop asking', 0),
-(3, 'Maria', 'Oh mamamama M A R I A !', '', 97.8),
-(4, 'Giulio33', 'Il giulio.', '', 110),
-(5, 'Sonia', 'Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione. ', 'È universalmente riconosciuto che un lettore che osserva il layout di una pagina viene distratto dal contenuto testuale se questo è leggibile. ', 0),
-(6, 'Giulio33', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ', 'But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.', 98),
-(7, 'silvia', 'On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment', 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.', 70);
 
 -- --------------------------------------------------------
 
@@ -158,6 +142,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Username`, `Email`, `Password`, `Birthday`, `Height`, `Weight`, `Photo`, `WeightTarget`, `Time`) VALUES
+('Fornero El Bombero', 'francesco.errico.12@gmail.com', 'bighole12', '2001-07-21', 176, 80, 'profile_pictures/WeFitPic.png', NULL, NULL),
 ('Giulio33', 'giugiu@gmail.com', 'giu33', '1997-10-04', 180, 70, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
 ('Maria', 'MaryAzzurri@gmail.com', 'Mary98', '1998-01-12', 165, 55, 'profile_pictures/photo1.jpg', NULL, '00:00:00'),
 ('silvia', 'brunella.battistini@virgilio.it', '123', '2001-10-19', 1, 0.1, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
@@ -199,6 +184,14 @@ ALTER TABLE `images`
   ADD KEY `Post-Images` (`Post`);
 
 --
+-- Indici per le tabelle `notifications`
+--
+ALTER TABLE `notifications`
+  ADD PRIMARY KEY (`Id`),
+  ADD KEY `receiver` (`User`),
+  ADD KEY `author` (`Author`);
+
+--
 -- Indici per le tabelle `post`
 --
 ALTER TABLE `post`
@@ -219,19 +212,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT per la tabella `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT per la tabella `images`
 --
 ALTER TABLE `images`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT per la tabella `notifications`
+--
+ALTER TABLE `notifications`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT per la tabella `post`
 --
 ALTER TABLE `post`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Limiti per le tabelle scaricate
@@ -263,6 +262,13 @@ ALTER TABLE `followers`
 --
 ALTER TABLE `images`
   ADD CONSTRAINT `Post-Images` FOREIGN KEY (`Post`) REFERENCES `post` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Limiti per la tabella `notifications`
+--
+ALTER TABLE `notifications`
+  ADD CONSTRAINT `author` FOREIGN KEY (`Author`) REFERENCES `users` (`Username`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `receiver` FOREIGN KEY (`User`) REFERENCES `users` (`Username`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limiti per la tabella `post`
