@@ -116,6 +116,17 @@
 
 			return $result->fetch_all(MYSQLI_ASSOC);
 		}
+
+		public function getHomePost() {
+			$query = "SELECT post.* FROM post, (SELECT User2 FROM followed WHERE User1=?) AS amici WHERE post.User=amici.User2 ORDER BY post.Id DESC;";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('s',$_SESSION["username"]);
+			$stmt->execute();
+			$result = $stmt->get_result();
+
+			return $result->fetch_all(MYSQLI_ASSOC);
+		}
+		
 		
 		public function getPostImages($postId){
 			$query = "SELECT * FROM images WHERE Post=?";

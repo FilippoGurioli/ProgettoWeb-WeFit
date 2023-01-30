@@ -1,6 +1,6 @@
 function generatePosts(posts){
     let result = "";
-    for(let i=posts.length - 1; i >= 0; i--){
+    for(let i= 0; i < posts.length; i++){
         let post = `
         <section class="post">
 			<header>
