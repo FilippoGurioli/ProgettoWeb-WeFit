@@ -76,7 +76,11 @@
 	padding: 10px;
 	border-radius: 10px;
 	border: 1px solid transparent;
-	font-size: 40pt;
+	font-size: 28pt;
+}
+
+pre, .weight {
+	font-size: 2vw;
 }
 
 .comment-section{
@@ -88,7 +92,7 @@
 }
 
 .comment p {
-	font-size: 30pt;
+	font-size: 20pt;
 	overflow:hidden;
 }
 
