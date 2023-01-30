@@ -1,13 +1,12 @@
 #badge > a {
     position: absolute;
-    left: 90%;
+    left: 85%;
     min-width: 20px;
     width: 8%;
     padding: 1%;
 }
 
 #badge > a img {
-    background-color: white;
     border-radius: 100px;
     padding: 5%;
     margin: 0;

@@ -8,11 +8,11 @@
 			<p>Altezza: <?php echo $templateParams["profile"]["height"];?>cm</p>
 		</div>
 		<?php if(isset($isPersonalP) && $isPersonalP == true): ?>
-			<a href="settings-redirector.php"><img src="./upload/WeFitLogo.png" alt="impostazioni del profilo"></a>
+			<a href="settings-redirector.php"><img src="./upload/icons/Options-icon.png" alt="impostazioni del profilo"></a>
 		<?php elseif(isset($isPersonalP) && $isPersonalP == false && !$templateParams["profile"]["friend"]): ?>
-			<a id="btnFollow" href="#" onclick="follow();">➕</a>
+			<a id="btnFollow" href="#" onclick="follow();"><img class="nav-icon" src="./upload/icons/Follow-icon.png"/></a>
 		<?php else: ?>
-			<a id="btnFollow" href="#" onclick="unfollow();">✔</a>
+			<a id="btnFollow" href="#" onclick="unfollow();"><img class="nav-icon" src="./upload/icons/Followed-icon.png"/></a>
 		<?php endif; ?>
 		<div id="link">
 			<a href="follower-redirector.php">Follower: <label><?php echo $templateParams["profile"]["numFollower"];?></label></a>
