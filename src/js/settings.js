@@ -6,13 +6,18 @@ let openHeight = false;
 let openPassword = false;
 
 function open() {
+  console.log(!openUser);
   if (!openUser) {
-    document.getElementById("user").style.display = "grid";
+    document.getElementById("user").style.display = "block";
     openUser = true;
   } else{
     document.getElementById("user").style.display = "none";
     openUser = false;
   }
+}
+
+function back() {
+  window.location.pathname = './ProgettoWeb-WeFit/src/profile-redirector.php';
 }
 
 
@@ -23,7 +28,7 @@ document.querySelector("main .personal-info input[name='mUsername']").addEventLi
 	const username = document.querySelector("input[name=username]").value;
 	login(username, password);
 });*/
-
+/*
 function modifyUsername(username) {
     const formData = new FormData();
     formData.append('username', username);
@@ -32,4 +37,4 @@ function modifyUsername(username) {
 			console.log("Gang");
 		}
     });
-}
+}*/
