@@ -8,7 +8,7 @@ function follow(){
     });
 	
 	document.getElementById("btnFollow").setAttribute("onClick", "unfollow();");
-	document.getElementById("btnFollow").innerHTML = "✔";
+	document.getElementById("btnFollow").innerHTML = '<img class="nav-icon" src="./upload/icons/Followed-icon.png"/>';
 }
 
 function unfollow(){
@@ -21,5 +21,5 @@ function unfollow(){
     });
 	
 	document.getElementById("btnFollow").setAttribute("onClick", "follow();");
-	document.getElementById("btnFollow").innerHTML = "➕";
+	document.getElementById("btnFollow").innerHTML = '<img class="nav-icon" src="./upload/icons/Follow-icon.png"/>';
 }
