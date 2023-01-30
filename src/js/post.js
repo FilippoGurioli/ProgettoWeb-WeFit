@@ -54,7 +54,6 @@ function generatePosts(posts){
 axios.get('api-post.php').then(response => {
 	for (let i = 0; i < response.data.length; i++) {
 		if (response.data[i]["Training"] != "") {
-			response.data[i]["Training"] = response.data[i]["Training"].replaceAll(",", " ");
 			response.data[i]["Training"] = "Allenamento:\n" + response.data[i]["Training"];
 		}
 	}

@@ -10,6 +10,7 @@
 				$result[$i]["Images"] = $dbh->getPostImages($result[$i]["Id"]);
 				$result[$i]["Comments"] = $dbh->getPostComments($result[$i]["Id"]);
 			}
+			$result = array_reverse($result);
 		} elseif ($_SESSION["page"] == "home"){
 			$result = $dbh->getHomePost();
 			for($i = 0; $i < count($result); $i++){
@@ -25,6 +26,7 @@
 				$result[$i]["Images"] = $dbh->getPostImages($result[$i]["Id"]);
 				$result[$i]["Comments"] = $dbh->getPostComments($result[$i]["Id"]);
 			}
+			$result = array_reverse($result);
 		}
 	}
 	

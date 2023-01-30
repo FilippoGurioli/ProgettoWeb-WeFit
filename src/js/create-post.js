@@ -66,14 +66,14 @@ document.getElementById("training-plan-fields").addEventListener("submit", funct
     event.preventDefault();
     const name = document.getElementById("txtExcercise").value;
     if (document.getElementById("static-inputs").style.display == "none") {
-        const duration = document.getElementById("nbrTime").value;
-        plan.innerHTML += '<div class="ex"><label>' + name +"</label><label>"+ duration +'min</label></div>';
+        const duration = "Durata:" + document.getElementById("nbrTime").value + "min";
+        plan.innerHTML += '<div class="ex"><label>' + name +"</label><label>"+ duration +'</label></div>';
         ex.push(new Array(name, duration));
     } else {
-        const reps = document.getElementById("nbrReps").value;
-        const series = document.getElementById("nbrSerie").value;
-        const rest = document.getElementById("nbrRestingTime").value;
-        plan.innerHTML += '<div class="ex"><label>' + name +"</label><label>Reps:"+reps+"</label><label>Series:"+series+"</label><label>Rest:"+rest+'min</label></div>';
+        const reps = "Reps:" + document.getElementById("nbrReps").value;
+        const series = "Series:" + document.getElementById("nbrSerie").value;
+        const rest = "Rest:" + document.getElementById("nbrRestingTime").value + "min";
+        plan.innerHTML += '<div class="ex"><label>' + name +"</label><label>"+reps+"</label><label>"+series+"</label><label>"+rest+'</label></div>';
         ex.push(new Array(name, reps, series, rest));
     }
     document.getElementById("txtExcercise").value = "";
