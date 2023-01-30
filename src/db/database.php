@@ -195,10 +195,10 @@
 			return $result->fetch_all(MYSQLI_ASSOC);
 		}
 
-		public function followNotification($user, $author) {
-			$query = "INSERT INTO `notifications` (`Id`, `User`, `Type`, `Author`) VALUES (NULL, ?, 'follow', ?);";
+		public function notification($user, $type, $author) {
+			$query = "INSERT INTO `notifications` (`Id`, `User`, `Type`, `Author`) VALUES (NULL, ?, ?, ?);";
 			$stmt = $this->db->prepare($query);
-			$stmt->bind_param('ss', $user, $author);
+			$stmt->bind_param('sss', $user, $type, $author);
 			$stmt->execute();
 		}
     }
