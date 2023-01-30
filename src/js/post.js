@@ -1,5 +1,12 @@
 function generatePosts(posts){
     let result = "";
+	for (let i = 0; i < posts.length; i++) {
+		if (posts[i]["Weight"] != 0) {
+			posts[i]["Weight"] = "Il peso di oggi è: " + posts[i]["Weight"] + "kg";
+		} else {
+			posts[i]["Weight"] = "";
+		}
+	}
     for(let i= 0; i < posts.length; i++){
         let post = `
         <section class="post">
@@ -19,7 +26,7 @@ function generatePosts(posts){
 			}
 			
 			post +=	`</div>
-				<div class="weight">Il peso di oggi è: ${posts[i]["Weight"]}</div>
+				<div class="weight">${posts[i]["Weight"]}</div>
 			</section>
 			<footer>
 			<form method="POST" action="#" id="form` + i + `" name="comments-form" class="comments-form">
