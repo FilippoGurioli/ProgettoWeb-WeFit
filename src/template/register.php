@@ -4,6 +4,7 @@
 <div id="form">
     <form action="#" method="POST" name="Accesso">
         <fieldset>
+            <p id="error" style="display: none; font-size: 20pt">Account già esistente!</p>
             <label>Username<br/>
                 <input type="text" name="username" id="username" required autofocus/><br/>
             </label>

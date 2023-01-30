@@ -10,11 +10,19 @@
         }
 		
 		public function register($user, $birth, $email, $height, $weight, $password) {
+			$query = "SELECT * FROM `users` WHERE `Username` = ?";
+			$stmt = $this->db->prepare($query);
+			$stmt->bind_param('s', $user);
+			$stmt->execute();
+			if (count($stmt->get_result()->fetch_all(MYSQLI_ASSOC)) != 0) {
+				return true;
+			}
             $stmt = $this->db->prepare("INSERT INTO `users` (`Username`, `Email`, `Password`, `Photo`, `Birthday`, `Height`, `Weight`) VALUES (?, ?, ?, 'profile_pictures/WeFitPic.png', ?, ?, ?);");
             $birth = strtotime($birth);
 			$birthSQL = date('Y-m-d', $birth);
 			$stmt->bind_param('ssssdd', $user, $email, $password, $birthSQL, $height, $weight);
             $stmt->execute();
+			return false;
 		}
 		
 		public function checkLogin($username, $password) {

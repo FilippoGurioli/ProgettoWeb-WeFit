@@ -7,6 +7,7 @@ document.querySelector("main form").addEventListener("submit", function (event) 
     const height = document.querySelector("input[name=altezza]").value;
     const weight = document.querySelector("input[name=peso]").value;
 	register(username, password, birthday, email, height, weight);
+
 });
 
 function register(username, password, birthday, email, height, weight) {
@@ -18,6 +19,10 @@ function register(username, password, birthday, email, height, weight) {
     formData.append('height', height);
     formData.append('weight', weight);
     axios.post('api-register.php', formData).then(response => {
-		  window.location.pathname = './ProgettoWeb-WeFit/src/index.php';
+        if (response.data["error"]) {
+            document.getElementById("error").style.display = "block";
+        } else {
+            window.location.pathname = './ProgettoWeb-WeFit/src/index.php';
+        }
     });
 }
