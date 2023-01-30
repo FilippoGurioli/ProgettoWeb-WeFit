@@ -21,7 +21,7 @@
                 $result["allFollowers"][$i]["Photo"] = $dbh->getUserInfo($result["allFollowers"][$i]["User2"])[0]["Photo"];
             }
             $result["getFollowers"] = true;
-        } elseif ($_SESSION["page"] == "friendfollowers") {
+        } elseif ($_SESSION["page"] == "friendfollowed") {
             $result["allFollowers"] = $dbh->getFollowed($_SESSION["searchResult"]);
             for($i = 0; $i < count($result["allFollowers"]); $i++){
                 $result["allFollowers"][$i]["Photo"] = $dbh->getUserInfo($result["allFollowers"][$i]["User2"])[0]["Photo"];
