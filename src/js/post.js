@@ -18,7 +18,7 @@ function generatePosts(posts){
 			</header>
 			<section>
 				<div class="comment">${posts[i]["Comment"]}</div>
-				<div class="training-plan">${posts[i]["Training"]}</div>
+				<div class="training-plan"><pre>${posts[i]["Training"]}</pre></div>
 				<div class="photo-container">`;
 		
 			for(let j = 0; j < posts[i]["Images"].length; j++){
@@ -52,6 +52,11 @@ function generatePosts(posts){
 }
 
 axios.get('api-post.php').then(response => {
+	for (let i = 0; i < response.data.length; i++) {
+		if (response.data[i]["Training"] != "") {
+			response.data[i]["Training"] = "Allenamento:\n" + response.data[i]["Training"];
+		}
+	}
     console.log(response.data);
 	let posts = generatePosts(response.data);
 	const main = document.getElementById("post-container");
