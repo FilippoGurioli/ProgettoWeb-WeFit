@@ -16,7 +16,7 @@
 		<?php endif; ?>
 		<div id="link">
 			<a href="follower-redirector.php">Follower: <label><?php echo $templateParams["profile"]["numFollower"];?></label></a>
-			<a href="#">Seguiti: <label><?php echo $templateParams["profile"]["numFollowed"];?></label></a>
+			<a href="followed-redirector.php">Seguiti: <label><?php echo $templateParams["profile"]["numFollowed"];?></label></a>
 		</div>
 	</header>
 	<section id="obiettivo">

@@ -4,7 +4,7 @@
             <h1 id="title">Notifiche</h1>
         <?php elseif (isset($_SESSION["page"]) && ($_SESSION["page"] == "personalfollowers" || $_SESSION["page"] == "friendfollowers")):?>
             <h1 id="title">Followers</h1>
-        <?php elseif (isset($_SESSION["page"]) && $_SESSION["page"] == "followed"):?>
+        <?php elseif (isset($_SESSION["page"]) && ($_SESSION["page"] == "personalfollowed" || $_SESSION["page"] == "friendfollowed")):?>
             <h1 id="title">Seguiti</h1>
         <?php endif; ?>
     </header>
