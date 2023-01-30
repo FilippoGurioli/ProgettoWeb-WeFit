@@ -17,7 +17,7 @@ function generatePosts(posts){
 				</div>
 			</header>
 			<section>
-				<div class="comment"><pre>${posts[i]["Comment"]}</pre></div>
+				<div class="comment">${posts[i]["Comment"]}</div>
 				<div class="training-plan"><pre>${posts[i]["Training"]}</pre></div>
 				<div class="photo-container">`;
 		
