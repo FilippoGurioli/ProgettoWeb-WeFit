@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 29, 2023 alle 19:59
+-- Creato il: Gen 30, 2023 alle 11:59
 -- Versione del server: 10.4.27-MariaDB
 -- Versione PHP: 8.2.0
 
@@ -45,14 +45,6 @@ CREATE TABLE `followed` (
   `User2` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dump dei dati per la tabella `followed`
---
-
-INSERT INTO `followed` (`User1`, `User2`) VALUES
-('Maria', 'Giulio33'),
-('Maria', 'silvia');
-
 -- --------------------------------------------------------
 
 --
@@ -63,14 +55,6 @@ CREATE TABLE `followers` (
   `User1` varchar(20) NOT NULL,
   `User2` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dump dei dati per la tabella `followers`
---
-
-INSERT INTO `followers` (`User1`, `User2`) VALUES
-('Giulio33', 'Maria'),
-('silvia', 'Maria');
 
 -- --------------------------------------------------------
 
@@ -96,14 +80,6 @@ CREATE TABLE `notifications` (
   `Type` varchar(20) NOT NULL,
   `Author` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dump dei dati per la tabella `notifications`
---
-
-INSERT INTO `notifications` (`Id`, `User`, `Type`, `Author`) VALUES
-(1, 'Fornero El Bombero', 'follow', 'Giulio33'),
-(2, 'silvia', 'follow', 'Fornero El Bombero');
 
 -- --------------------------------------------------------
 
@@ -142,11 +118,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`Username`, `Email`, `Password`, `Birthday`, `Height`, `Weight`, `Photo`, `WeightTarget`, `Time`) VALUES
-('Fornero El Bombero', 'francesco.errico.12@gmail.com', 'bighole12', '2001-07-21', 176, 80, 'profile_pictures/WeFitPic.png', NULL, NULL),
 ('Giulio33', 'giugiu@gmail.com', 'giu33', '1997-10-04', 180, 70, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
 ('Maria', 'MaryAzzurri@gmail.com', 'Mary98', '1998-01-12', 165, 55, 'profile_pictures/photo1.jpg', NULL, '00:00:00'),
-('silvia', 'brunella.battistini@virgilio.it', '123', '2001-10-19', 1, 0.1, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
-('Sonia', 'asd@g.it', 'sonia', '0000-00-00', 170, 62, 'profile_pictures/WeFitPic.png', NULL, NULL);
+('silvia', 'brunella.battistini@virgilio.it', '123', '2001-10-19', 1, 0.1, 'profile_pictures/WeFitPic.png', NULL, '00:00:00');
 
 --
 -- Indici per le tabelle scaricate
@@ -212,7 +186,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT per la tabella `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT per la tabella `images`
@@ -224,13 +198,13 @@ ALTER TABLE `images`
 -- AUTO_INCREMENT per la tabella `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT per la tabella `post`
 --
 ALTER TABLE `post`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Limiti per le tabelle scaricate
