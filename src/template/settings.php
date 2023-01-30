@@ -22,7 +22,7 @@
 	</form>
 	<form class="exit">
 		<input type="button" onclick="" value="Elimina profilo"></input>
-		<input type="button" onclick="" value="Esci dal profilo"></input>
+		<input type="button" onclick="index.php" value="Esci dal profilo"></input>
 	</form>
 </section>
 <footer>
