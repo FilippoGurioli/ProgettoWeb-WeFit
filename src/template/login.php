@@ -19,5 +19,4 @@
             <a href="register-redirector.php"><button>Registrati</button></a>
         </div>
     </div>
-    <footer>By Filippo Gurioli & Silvia Furegato</footer>
 </div>
