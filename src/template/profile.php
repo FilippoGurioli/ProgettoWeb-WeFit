@@ -22,7 +22,7 @@
 	<section id="obiettivo">
 		<h1>Obiettivo</h1>
 		<p>Peso: <?php echo $templateParams["profile"]["weightTarget"];?>kg</p>
-		<p>Tempo limite: <?php echo $templateParams["profile"]["time"];?></p>
+		<p>Tempo limite: <?php echo $templateParams["profile"]["time"];?> mesi</p>
 	</section>
 </div>
 <div id="placeholder"></div>

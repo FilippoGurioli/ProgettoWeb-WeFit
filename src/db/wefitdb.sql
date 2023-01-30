@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Creato il: Gen 30, 2023 alle 11:59
--- Versione del server: 10.4.27-MariaDB
--- Versione PHP: 8.2.0
+-- Creato il: Gen 30, 2023 alle 14:23
+-- Versione del server: 10.4.20-MariaDB
+-- Versione PHP: 8.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,7 +32,17 @@ CREATE TABLE `comments` (
   `Post` int(11) NOT NULL,
   `Text` text NOT NULL,
   `Author` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `comments`
+--
+
+INSERT INTO `comments` (`Id`, `Post`, `Text`, `Author`) VALUES
+(1, 25, 'Ottimo allenamento!', 'Sonia45'),
+(2, 25, 'Graziee <3', 'Maria'),
+(3, 27, 'Bella foto!', 'Giulio33'),
+(4, 26, 'Continua così!!', 'Giulio33');
 
 -- --------------------------------------------------------
 
@@ -43,7 +53,18 @@ CREATE TABLE `comments` (
 CREATE TABLE `followed` (
   `User1` varchar(20) NOT NULL,
   `User2` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `followed`
+--
+
+INSERT INTO `followed` (`User1`, `User2`) VALUES
+('Giulio33', 'Maria'),
+('Giulio33', 'Sonia45'),
+('Maria', 'Giulio33'),
+('Maria', 'Silviaaa'),
+('Sonia45', 'Maria');
 
 -- --------------------------------------------------------
 
@@ -54,7 +75,18 @@ CREATE TABLE `followed` (
 CREATE TABLE `followers` (
   `User1` varchar(20) NOT NULL,
   `User2` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `followers`
+--
+
+INSERT INTO `followers` (`User1`, `User2`) VALUES
+('Giulio33', 'Maria'),
+('Maria', 'Giulio33'),
+('Maria', 'Sonia45'),
+('Silviaaa', 'Maria'),
+('Sonia45', 'Giulio33');
 
 -- --------------------------------------------------------
 
@@ -66,7 +98,16 @@ CREATE TABLE `images` (
   `Id` int(11) NOT NULL,
   `Post` int(11) NOT NULL,
   `Image` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `images`
+--
+
+INSERT INTO `images` (`Id`, `Post`, `Image`) VALUES
+(1, 25, '0.jpg'),
+(2, 27, '1.jpg'),
+(3, 27, '2.jpg');
 
 -- --------------------------------------------------------
 
@@ -79,7 +120,23 @@ CREATE TABLE `notifications` (
   `User` varchar(20) NOT NULL,
   `Type` varchar(20) NOT NULL,
   `Author` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `notifications`
+--
+
+INSERT INTO `notifications` (`Id`, `User`, `Type`, `Author`) VALUES
+(1, 'Giulio33', 'follow', 'Maria'),
+(2, 'Silviaaa', 'follow', 'Maria'),
+(3, 'Maria', 'follow', 'Sonia45'),
+(4, 'Maria', 'comment', 'Sonia45'),
+(5, 'Sonia45', 'post', 'Maria'),
+(6, 'Maria', 'post', 'Giulio33'),
+(7, 'Maria', 'follow', 'Giulio33'),
+(8, 'Maria', 'comment', 'Giulio33'),
+(9, 'Maria', 'comment', 'Giulio33'),
+(10, 'Sonia45', 'follow', 'Giulio33');
 
 -- --------------------------------------------------------
 
@@ -93,7 +150,17 @@ CREATE TABLE `post` (
   `Comment` text NOT NULL,
   `Training` text NOT NULL,
   `Weight` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dump dei dati per la tabella `post`
+--
+
+INSERT INTO `post` (`Id`, `User`, `Comment`, `Training`, `Weight`) VALUES
+(25, 'Maria', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'Corsa,Durata:30min\n', 0),
+(26, 'Maria', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '\n', 65),
+(27, 'Maria', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', '\n', 60),
+(28, 'Giulio33', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.', 'Piegamenti,Reps:8,Series:5,Rest:3min\nAddominali,Reps:10,Series:4,Rest:2min\nCorsa,Durata:10min\n', 0);
 
 -- --------------------------------------------------------
 
@@ -110,17 +177,18 @@ CREATE TABLE `users` (
   `Weight` float NOT NULL,
   `Photo` varchar(100) NOT NULL,
   `WeightTarget` float DEFAULT NULL,
-  `Time` time DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `Time` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dump dei dati per la tabella `users`
 --
 
 INSERT INTO `users` (`Username`, `Email`, `Password`, `Birthday`, `Height`, `Weight`, `Photo`, `WeightTarget`, `Time`) VALUES
-('Giulio33', 'giugiu@gmail.com', 'giu33', '1997-10-04', 180, 70, 'profile_pictures/WeFitPic.png', NULL, '00:00:00'),
-('Maria', 'MaryAzzurri@gmail.com', 'Mary98', '1998-01-12', 165, 55, 'profile_pictures/photo1.jpg', NULL, '00:00:00'),
-('silvia', 'brunella.battistini@virgilio.it', '123', '2001-10-19', 1, 0.1, 'profile_pictures/WeFitPic.png', NULL, '00:00:00');
+('Giulio33', 'giugiu@gmail.com', 'giu33', '1997-10-04', 180, 80, 'profile_pictures/WeFitPic.png', 70, 2),
+('Maria', 'MaryAzzurri@gmail.com', 'Mary98', '1998-01-12', 165, 55, 'profile_pictures/photo1.jpg', NULL, 0),
+('Silviaaa', 'silviaVerdi@virgilio.it', '123', '2001-10-19', 155, 50, 'profile_pictures/WeFitPic.png', NULL, 0),
+('Sonia45', 'sonia.rossi@alice.it', 'sonia', '2005-01-06', 168, 65, 'profile_pictures/WeFitPic.png', NULL, NULL);
 
 --
 -- Indici per le tabelle scaricate
@@ -186,25 +254,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT per la tabella `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT per la tabella `images`
 --
 ALTER TABLE `images`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT per la tabella `notifications`
 --
 ALTER TABLE `notifications`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT per la tabella `post`
 --
 ALTER TABLE `post`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- Limiti per le tabelle scaricate
