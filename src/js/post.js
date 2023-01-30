@@ -57,11 +57,11 @@ function attachEventListener(posts, allPosts){
 		let commentForm=document.getElementById("form" + i);
 		let txt = document.getElementById("txt-c" + i);
 		commentForm.txt = txt;
-		commentForm.postId = allPosts[i]["Id"];
+		commentForm.post = allPosts[i];
 		commentForm.formId = i;
 		commentForm.addEventListener("submit", function (event) {
 			event.preventDefault();
-			uploadComment(event.currentTarget.postId, event.currentTarget.txt.value);
+			uploadComment(event.currentTarget.post, event.currentTarget.txt.value);
 			updateComment();
 		});
 	}
@@ -69,7 +69,8 @@ function attachEventListener(posts, allPosts){
 
 function uploadComment(post, text){
 	const formData = new FormData();
-    formData.append('post', post);
+    formData.append('post', post["Id"]);
+	formData.append('user', post["User"]);
     formData.append('text', text);
     axios.post('api-comment.php', formData).then(response2 => {
 		console.log(response2);
