@@ -24,7 +24,7 @@ if(isset($_POST["comment"]) && isset($_POST["images"]) && isset($_POST["exercise
 	$dbh->createPost($_POST["comment"], $imagesName, $_POST["exercises"], $_POST["weight"]);
 	$followers = $dbh->getFollowers($_SESSION["username"]);
 	foreach ($followers as $f) {
-		$dbh->notification($f, "post", $_SESSION["username"]);
+		$dbh->notification($f["User2"], "post", $_SESSION["username"]);
 	}
 	$result["error"] = false;
 }
