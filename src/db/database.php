@@ -57,9 +57,9 @@
 		
 		//NOT IN USE - Settings
 		public function updateUser($new, $old, $param) {
-			$query = "UPDATE `users` SET ? = ? WHERE `users`.? = ?;";
+			$query = "UPDATE `users` SET `Email` = ? WHERE `users`.`Email` = ?;";
 			$stmt = $this->db->prepare($query);
-			$stmt->bind_param('ssss', $param, $newUsername, $param, $oldUsername);
+			$stmt->bind_param('ss',$newUsername, $oldUsername);
 			$stmt->execute();
 		}
 		

@@ -3,19 +3,15 @@ require_once 'bootstrap.php';
 
 $result["successoModifica"] = false;
 
-if(isset($_POST["searched"])) {
-  $search_result = $dbh->isPresent($_POST["searched"]);
-  if(count($search_result)!=0 && $_SESSION["username"]!=$search_result[0]["Username"]) {
-	  $uInformations = $dbh->getUserInfo($search_result[0]["Username"]);
-	  $result["successoRicerca"] = true;
-	  $result["Username"] = $uInformations[0]["Username"];
-	  $result["Email"] = $uInformations[0]["Email"];
-	  $result["Password"] = $uInformations[0]["Password"];
-	  $result["Birthday"] = $uInformations[0]["Birthday"];
-	  $result["Height"] = $uInformations[0]["Height"];
-	  $result["Weight"] = $uInformations[0]["Weight"];
-	  $result["Photo"] = $uInformations[0]["Photo"];
-  }
+if(isset($_POST["username"])) {
+	$dbh->updateUser($_POST["username"], $_SESSION["username"], "Username");
+	$result["successoModifica"] = true;
+}
+
+if(isset($_POST["email"])) {
+	$email = $dbh->getUserInfo($_SESSION["username"])[0]["Email"];
+	$dbh->updateUser($_POST["email"], $email, "Email");
+	$result["successoModifica"] = true;
 }
 
 header('Content-Type: application/json');

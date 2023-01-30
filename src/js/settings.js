@@ -5,13 +5,24 @@ let openWeight = false;
 let openHeight = false;
 let openPassword = false;
 
-function open() {
-  console.log(!openUser);
+function openTxt() {
   if (!openUser) {
     document.getElementById("user").style.display = "block";
     openUser = true;
   } else{
+    modifyUsername(document.getElementById("user").value);
     document.getElementById("user").style.display = "none";
+    openUser = false;
+  }
+}
+
+function openEmailTxt() {
+  if (!openEmail) {
+    document.getElementById("email").style.display = "block";
+    openUser = true;
+  } else{
+    modifyEmail(document.getElementById("email").value);
+    document.getElementById("email").style.display = "none";
     openUser = false;
   }
 }
@@ -28,13 +39,19 @@ document.querySelector("main .personal-info input[name='mUsername']").addEventLi
 	const username = document.querySelector("input[name=username]").value;
 	login(username, password);
 });*/
-/*
+
 function modifyUsername(username) {
     const formData = new FormData();
     formData.append('username', username);
-    axios.get('api-settings.php', formData).then(response => {
-		if(response.data["successoModifica"]) {
-			console.log("Gang");
-		}
+    axios.post('api-settings.php', formData).then(response => {
+		  console.log(response);
     });
-}*/
+}
+
+function modifyEmail(email) {
+  const formData = new FormData();
+  formData.append('email', email);
+  axios.post('api-settings.php', formData).then(response => {
+    console.log(response);
+  });
+}
