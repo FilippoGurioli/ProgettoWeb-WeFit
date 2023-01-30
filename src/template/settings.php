@@ -4,7 +4,7 @@
 <section>
 	<form class="personal-info">
 		<h3>Informazioni Personali:</h3>
-		<input type="button" name="mUsername" onCLick="open()" value="Modifica username"></input>
+		<input type="button" name="mUsername" onClick="open()" value="Modifica username"></input>
 		<input id="user" type="text" name="txtUsername" placeholder="Inserisci nuovo username"></input>
 		<input type="button" name="mBirthday" value="Modifica data di nascita"></input>
 		<input id="birth" type="date" name="dtBirthday"></input>
@@ -22,11 +22,11 @@
 	</form>
 	<form class="exit">
 		<input type="button" onclick="" value="Elimina profilo"></input>
-		<input type="button" onclick="index.php" value="Esci dal profilo"></input>
+		<input type="button" onclick="" value="Esci dal profilo"></input>
 	</form>
 </section>
 <footer>
 	<form class="back">
-		<input type="button" onclick="window.location.pathname = './ProgettoWeb-WeFit/src/profile-redirector.php';" value="Torna a WeFit!"></input>
+		<input type="button" onclick="back()" value="Torna a WeFit!"></input>
 	</form>
 </footer>
